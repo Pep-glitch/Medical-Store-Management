@@ -13,6 +13,7 @@ public class MyActionListener implements ActionListener
     DrugsDisplay drugsObject ;
     MainDisplay  mainDisplayObject;
     ReportsDisplay reportObject;
+    PriscriptionsDisplay prisciptionsObject;
     MyActionListener(Display d)
     {
         this.dp=d;
@@ -36,6 +37,10 @@ public class MyActionListener implements ActionListener
     MyActionListener(ReportsDisplay rd)
     {
         this.reportObject =rd;
+    }
+    MyActionListener(PriscriptionsDisplay pd)
+    {
+        this.prisciptionsObject = pd;
     }
     public void actionPerformed(ActionEvent e)
     {
