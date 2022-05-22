@@ -14,30 +14,30 @@ public class PriscriptionsDisplay extends Frame
     {
         super();
         setLayout(null);
-        setBounds(0,0,600,500);
+        setBounds(0,0,600,800);
         
-        symp_one = new Checkbox();
-        symp_two = new Checkbox();
-        symp_three= new Checkbox();
-        symp_four = new Checkbox();
-        symp_five = new Checkbox();
-        symp_six = new Checkbox();
-        symp_seven = new Checkbox();
-        symp_eight = new Checkbox();
-        symp_nine = new Checkbox();
-        symp_ten = new Checkbox();
+        symp_one = new Checkbox("Head pain");
+        symp_two = new Checkbox("Neck pain");
+        symp_three= new Checkbox("Spinal");
+        symp_four = new Checkbox("Muscle");
+        symp_five = new Checkbox("Stomach ache");
+        symp_six = new Checkbox("Tooth ache");
+        symp_seven = new Checkbox("Malaria");
+        symp_eight = new Checkbox("flu");
+        symp_nine = new Checkbox("cough");
+        symp_ten = new Checkbox("heat");
         font_bold = new Font("Arial",Font.BOLD,16)
 
-        symp_one.setBounds();
-        symp_two.setBounds();
-        symp_three.setBounds();
-        symp_four.setBounds();
-        symp_five.setBounds();
-        symp_six.setBounds();
-        symp_seven.setBounds();
-        symp_eight.setBounds();
-        symp_nine.setBounds();
-        symp_ten.setBounds();
+        symp_one.setBounds(100,100,200,50);
+        symp_two.setBounds(100,160,200,50);
+        symp_three.setBounds(100,220,200,50);
+        symp_four.setBounds(100,280,200,50);
+        symp_five.setBounds(100,340,200,50);
+        symp_six.setBounds(100,400,200,50);
+        symp_seven.setBounds(100,460,200,50);
+        symp_eight.setBounds(100,520,200,50);
+        symp_nine.setBounds(100,580,200,50);
+        symp_ten.setBounds(100,640,200,50);
 
         symp_one.setFont(font_bold);
         symp_two.setFont(font_bold);
