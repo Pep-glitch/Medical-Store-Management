@@ -5,7 +5,7 @@ import java.io.*;
 import javax.swing.*;
 import java.lang.*;
 import pharmacy.Display;
-public class MyActionListener implements ActionListener
+public class MyActionListener implements ActionListener,ItemListener
 {
     Display dp;
     DiseaseBasedDisplay diseaseObject;
@@ -84,7 +84,7 @@ public class MyActionListener implements ActionListener
     }
     public void actionPerformed(ActionEvent e)
     {
-
+        
     }
     
 }
