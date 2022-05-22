@@ -31,6 +31,11 @@ public class DrugsDisplay extends Frame
         btn_general.setFont(font_bold);
         btn_home.setFont(font_bold);
 
+        add(btn_by_age);
+        add(btn_disease);
+        add(btn_general);
+        add(btn_home);
+
         btn_by_age.addActionListener(ml);
         btn_disease.addActionListener(ml);
         btn_general.addActionListener(ml);

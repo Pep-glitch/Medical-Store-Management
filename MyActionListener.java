@@ -14,6 +14,14 @@ public class MyActionListener implements ActionListener
     MainDisplay  mainDisplayObject;
     ReportsDisplay reportObject;
     PriscriptionsDisplay prisciptionsObject;
+    OverFortyDisplay overFortyObject;
+    UnderFortyDisplay underFortyObject;
+    DeficiencyDisplay  deficiencyObject;
+    UnderTenDisplay underTenObject;
+    UnderTwentyDisplay underTwentyObject;
+    PhysiologicalDisplay physiologicalObject;
+    InfectiousDisplay infectiousObject;
+    HereditaryDisplay hereditaryObject;
     MyActionListener(Display d)
     {
         this.dp=d;
@@ -41,6 +49,38 @@ public class MyActionListener implements ActionListener
     MyActionListener(PriscriptionsDisplay pd)
     {
         this.prisciptionsObject = pd;
+    }
+    MyActionListener(OverFortyDisplay ofd)
+    {
+        this.overFortyObject = ofd;
+    }
+    MyActionListener(UnderFortyDisplay ufd)
+    {
+      this.underFortyObject = ufd;
+    }
+    MyActionListener(DeficiencyDisplay dfd)
+    {
+      this.deficiencyObject =dfd; 
+    }
+    MyActionListener(UnderTenDisplay ut)
+    {
+       this.underTenObject = ut; 
+    }
+    MyActionListener( UnderTwentyDisplay uttd)
+    {
+       this.underTwentyObject = uttd;
+    }
+    MyActionListener( PhysiologicalDisplay phd)
+    {
+      this. physiologicalObject= phd;
+    }
+    MyActionListener(InfectiousDisplay id)
+    {
+        this.infectiousObject = id;
+    }
+    MyActionListener(HereditaryDisplay hd)
+    {
+       this.hereditaryObject = hd; 
     }
     public void actionPerformed(ActionEvent e)
     {
