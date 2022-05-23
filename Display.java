@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
+import java.awt.Color.*;
 import java.lang.*;
 public class Display extends Frame
 {
@@ -10,12 +11,18 @@ public class Display extends Frame
     Label lbl_admin_id, lbl_admin_pass;
     Button btn_login;
     Font font_bold;
+    Color bgColor;
+    Icon image;
     MyActionListener ml = new MyActionListener(this);
     Display()
     {
         super();
         setLayout(null);
         setBounds(0,0,600,500);
+
+        bgColor = new Color(100,200,100);
+        setBackground(bgColor);
+       
 
         lbl_admin_id = new Label("Admin ID");
         lbl_admin_pass= new Label("Admin Password");

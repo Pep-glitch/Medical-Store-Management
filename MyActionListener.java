@@ -3,8 +3,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
-import java.lang.*;
-import pharmacy.Display;
 public class MyActionListener implements ActionListener,ItemListener
 {
     Display dp;
@@ -82,9 +80,115 @@ public class MyActionListener implements ActionListener,ItemListener
     {
        this.hereditaryObject = hd; 
     }
+     public void itemStateChanged(ItemEvent ie)
+    {
+
+    }
     public void actionPerformed(ActionEvent e)
     {
-        
+        Display dp = new Display();
+        DiseaseBasedDisplay diseaseObject = new DiseaseBasedDisplay();
+        AgeBasedDisplay ageBasedObject = new  AgeBasedDisplay() ;
+        DrugsDisplay drugsObject = new DrugsDisplay() ;
+        MainDisplay  mainDisplayObject = new MainDisplay();
+        ReportsDisplay reportObject = new  ReportsDisplay();
+        PriscriptionsDisplay prisciptionsObject = new PriscriptionsDisplay();
+        OverFortyDisplay overFortyObject = new  OverFortyDisplay();
+        UnderFortyDisplay underFortyObject = new  UnderFortyDisplay();
+        DeficiencyDisplay  deficiencyObject = new  DeficiencyDisplay();
+        UnderTenDisplay underTenObject = new  UnderTenDisplay();
+        UnderTwentyDisplay underTwentyObject = new  UnderTwentyDisplay();
+        PhysiologicalDisplay physiologicalObject = new PhysiologicalDisplay();
+        InfectiousDisplay infectiousObject = new  InfectiousDisplay();
+        HereditaryDisplay hereditaryObject = new  HereditaryDisplay();
+        if(e.getActionCommand().equals("Log In"))
+        {
+            this.dp.setVisible(false);
+            mainDisplayObject.setVisible(true);
+        }
+       if(e.getActionCommand().equals("DRUGS")) 
+       {
+          this.mainDisplayObject.setVisible(false);
+          drugsObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("AGE GROUPS"))
+       {
+          this.drugsObject.setVisible(false);
+          ageBasedObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("DISEASE TYPE"))
+       {
+           this.drugsObject.setVisible(false);
+           diseaseObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("GENERIC"))
+       {
+          this.drugsObject.setVisible(false);
+          dp.setVisible(true);
+       }
+       if(e.getActionCommand().equals("HOME"))
+       {
+        // this.drugsObject.setVisible(false);
+          mainDisplayObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("0-10"))
+       {
+           this. ageBasedObject.setVisible(false);
+           underTenObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("10-20"))
+       {
+           this. ageBasedObject.setVisible(false);
+           underTwentyObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("20-40"))
+       {
+            this. ageBasedObject.setVisible(false);
+            underFortyObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("40+"))
+       {
+           this. ageBasedObject.setVisible(false);
+           overFortyObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("INFECTIOUS"))
+       {
+            this.diseaseObject.setVisible(false);
+            infectiousObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("DEFICIENCY"))
+       {
+            this.diseaseObject.setVisible(false);
+            deficiencyObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("HEREDITARY"))
+       {
+            this.diseaseObject.setVisible(false);
+            hereditaryObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("PHYSIOLOGICAL"))
+       {
+            this.diseaseObject.setVisible(false);
+            physiologicalObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("PRESCRIPTIONS"))
+       {
+            this.mainDisplayObject.setVisible(false);
+            prisciptionsObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("REPORTS"))
+       {
+            this.mainDisplayObject.setVisible(false);
+            reportObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals(""))
+       {
+
+       }
+       if(e.getActionCommand().equals(""))
+       {
+
+       }
     }
     
 }

@@ -8,13 +8,15 @@ public class PriscriptionsDisplay extends Frame
 {
     Checkbox symp_one,symp_two,symp_three,symp_four,symp_five,symp_six,symp_seven,symp_eight,symp_nine,symp_ten;
     Font font_bold;
+    Button btn_dosage;
+    Label lbl_symptoms;
     // TextField txtbox;
     MyActionListener ml = new MyActionListener(this);
     PriscriptionsDisplay()
     {
         super();
         setLayout(null);
-        setBounds(0,0,600,800);
+        setBounds(0,0,600,600);
         
         symp_one = new Checkbox("Head pain");
         symp_two = new Checkbox("Neck pain");
@@ -26,18 +28,22 @@ public class PriscriptionsDisplay extends Frame
         symp_eight = new Checkbox("flu");
         symp_nine = new Checkbox("cough");
         symp_ten = new Checkbox("heat");
-        font_bold = new Font("Arial",Font.BOLD,16)
+        btn_dosage = new Button("DOSAGE");
+        lbl_symptoms = new Label("SYMPTOMS");
+        font_bold = new Font("Arial",Font.BOLD,16);
 
         symp_one.setBounds(100,100,200,50);
         symp_two.setBounds(100,160,200,50);
         symp_three.setBounds(100,220,200,50);
         symp_four.setBounds(100,280,200,50);
         symp_five.setBounds(100,340,200,50);
-        symp_six.setBounds(100,400,200,50);
-        symp_seven.setBounds(100,460,200,50);
-        symp_eight.setBounds(100,520,200,50);
-        symp_nine.setBounds(100,580,200,50);
-        symp_ten.setBounds(100,640,200,50);
+        symp_six.setBounds(320,100,200,50);
+        symp_seven.setBounds(320,160,200,50);
+        symp_eight.setBounds(320,220,200,50);
+        symp_nine.setBounds(320,280,200,50);
+        symp_ten.setBounds(320,340,200,50);
+        btn_dosage.setBounds(200,400,150,60);
+        lbl_symptoms.setBounds(200,50,200,50);
 
         symp_one.setFont(font_bold);
         symp_two.setFont(font_bold);
@@ -49,6 +55,8 @@ public class PriscriptionsDisplay extends Frame
         symp_eight.setFont(font_bold);
         symp_nine.setFont(font_bold);
         symp_ten.setFont(font_bold);
+        btn_dosage.setFont(font_bold);
+        lbl_symptoms.setFont(font_bold);
 
         
         add(symp_one);
@@ -57,10 +65,12 @@ public class PriscriptionsDisplay extends Frame
         add(symp_four);
         add(symp_five);
         add(symp_six);
-        add(symp_seve);
+        add(symp_seven);
         add(symp_eight);
         add(symp_nine);
         add(symp_ten);
+        add(btn_dosage);
+        add( lbl_symptoms);
         
         symp_one.addItemListener(ml);
         symp_two.addItemListener(ml);
@@ -72,6 +82,7 @@ public class PriscriptionsDisplay extends Frame
         symp_eight.addItemListener(ml);
         symp_nine.addItemListener(ml);
         symp_ten.addItemListener(ml);
+        btn_dosage.addActionListener(ml);
         addWindowListener(new WindowAdapter()
 			{
 				public void windowClosing(WindowEvent we)
@@ -80,11 +91,11 @@ public class PriscriptionsDisplay extends Frame
 				}
 			});
     }
-    /*
+    
     public static void main(String ss[])
     {
         PriscriptionsDisplay  prisciptionsObject = new PriscriptionsDisplay();
         prisciptionsObject.setVisible(true);
     }  
-    */ 
+    
 }

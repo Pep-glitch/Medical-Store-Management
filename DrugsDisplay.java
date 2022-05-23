@@ -48,9 +48,11 @@ public class DrugsDisplay extends Frame
 				}
 			});
     }
+    /*
     public static void main(String ss[])
     {
         DrugsDisplay drugsObject = new DrugsDisplay();
         drugsObject.setVisible(true);
     }  
+    */
 }
