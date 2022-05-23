@@ -3,7 +3,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
-import java.lang.*;
 public class MainDisplay extends Frame
 {
     Button drugs,reports,presciptions;

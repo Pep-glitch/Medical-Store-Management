@@ -189,6 +189,118 @@ public class MyActionListener implements ActionListener,ItemListener
        {
 
        }
+
+       //for Under Ten frame
+       if(e.getSource()== underTenObject.btn_hom_utd)
+       {
+
+       }
+       if(e.getSource()== underTenObject.btn_next_utd)
+       {
+
+       }
+       if(e.getSource()== underTenObject.btn_prev_utd)
+       {
+
+       }
+
+      //for Under Twenty Frame
+      if(e.getSource()==underTwentyObject.btn_hom_uttd)
+      {
+
+      }
+      if(e.getSource()==underTwentyObject.btn_next_uttd)
+      {
+          
+      }
+      if(e.getSource()==underTwentyObject.btn_prev_uttd)
+      {
+          
+      }
+
+      //for Under Forty frame
+      if(e.getSource()==underFortyObject.btn_hom_ufd)
+      {
+          
+      }
+      if(e.getSource()==underFortyObject.btn_next_ufd)
+      {
+          
+      }
+      if(e.getSource()==underFortyObject.btn_prev_ufd)
+      {
+          
+      }
+
+      //for OverForty Frame
+      if(e.getSource()==overFortyObject.btn_hom_ofd)
+      {
+          
+      }
+      if(e.getSource()==overFortyObject.btn_next)
+      {
+          
+      }
+      if(e.getSource()==overFortyObject.btn_prev)
+      {
+          
+      }
+
+      //for Infectious Frame
+      if(e.getSource()==infectiousObject)
+      {
+          
+      }
+      if(e.getSource()==infectiousObject)
+      {
+          
+      }
+      if(e.getSource()==infectiousObject)
+      {
+          
+      }
+
+      //for Deficiency Frame
+      if(e.getSource()==deficiencyObject)
+      {
+          
+      }
+      if(e.getSource()==deficiencyObject)
+      {
+          
+      }
+      if(e.getSource()==deficiencyObject)
+      {
+          
+      }
+
+      //for Hereditary Frame
+      if(e.getSource()== hereditaryObject)
+      {
+          
+      }
+      if(e.getSource()== hereditaryObject)
+      {
+          
+      }
+      if(e.getSource()== hereditaryObject)
+      {
+          
+      }
+
+      //for Phsiological Frame
+      if(e.getSource()== physiologicalObject)
+      {
+          
+      }
+      if(e.getSource()== physiologicalObject)
+      {
+          
+      }
+      if(e.getSource()== physiologicalObject)
+      {
+          
+      }
     }
     
 }
