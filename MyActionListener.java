@@ -119,8 +119,27 @@ public class MyActionListener implements ActionListener,ItemListener
 
         if(e.getActionCommand().equals("Log In"))
         {
-            this.dp.setVisible(false);
-            mainDisplayObject.setVisible(true);
+            System.out.println(dp.txt_admin_id.getText());
+            try {
+                FileWriter fw = new FileWriter("admintest/logid.txt");
+                fw.write(dp. txt_admin_id.getText());
+                fw.close();
+                FileWriter fw2 = new FileWriter("admintest/logpass.txt");
+                fw2.write(dp.txt_admin_pass.getText());
+                fw2.close();
+                if(Admin.validate_user()==true)
+                {
+                    this.dp.setVisible(false);
+                    mainDisplayObject.setVisible(true);  
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null,"Incorrect id or password","Error",JOptionPane.INFORMATION_MESSAGE);
+                }
+            } catch (Exception exp) {
+               JOptionPane.showMessageDialog(null, exp, "Error",JOptionPane.INFORMATION_MESSAGE);
+            }
+           
         }
        if(e.getActionCommand().equals("DRUGS")) 
        {
