@@ -24,7 +24,7 @@ public class InfectiousDisplay extends Frame
         txt_availability_id = new TextField();
         btn_next  = new Button("next");
         btn_prev = new Button("prev");
-        btn_hom_id = new Button("HOME");
+        btn_hom_id = new Button("START");
         lbl_disease = new Label("Disease");
         lbl_drug_name = new Label("Drug Name");
         lbl_expiry = new Label("Expiry");

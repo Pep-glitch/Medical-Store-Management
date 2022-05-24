@@ -3,7 +3,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
-import java.lang.*;
 public class DrugsDisplay extends Frame 
 {
     Button btn_by_age, btn_disease,btn_general,btn_home;
@@ -18,7 +17,7 @@ public class DrugsDisplay extends Frame
         btn_by_age = new Button("AGE GROUPS");
         btn_disease= new Button("DISEASE TYPE");
         btn_general= new Button("GENERIC");
-        btn_home = new Button("HOME");
+        btn_home = new Button("FIRST VIEW");
         font_bold = new Font("Arial",Font.BOLD,16);
 
         btn_by_age.setBounds(100,100,300,50);

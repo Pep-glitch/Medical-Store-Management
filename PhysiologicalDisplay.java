@@ -24,7 +24,7 @@ public class PhysiologicalDisplay extends Frame
         txt_availability_pyd = new TextField();
         btn_next  = new Button("next");
         btn_prev = new Button("prev");
-        btn_hom_pyd = new Button("HOME");
+        btn_hom_pyd = new Button("FIRST PAGE");
         lbl_disease = new Label("Disease");
         lbl_drug_name = new Label("Drug Name");
         lbl_expiry = new Label("Expiry");

@@ -23,7 +23,7 @@ public class HereditaryDisplay extends Frame
         txt_availability_hd = new TextField();
         btn_next  = new Button("next");
         btn_prev = new Button("prev");
-        btn_hom_hd = new Button("HOME");
+        btn_hom_hd = new Button("START VIEW");
         lbl_disease = new Label("Disease");
         lbl_drug_name = new Label("Drug Name");
         lbl_expiry = new Label("Expiry");

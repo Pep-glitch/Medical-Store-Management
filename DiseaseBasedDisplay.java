@@ -18,7 +18,7 @@ public class DiseaseBasedDisplay extends Frame
         btn_deficiency = new Button("DEFICIENCY");
         btn_hereditary = new Button("HEREDITARY");
         btn_physiological = new Button("PHYSIOLOGICAL");
-        btn_home = new Button("HOME");
+        btn_home = new Button("FRONT VIEW");
         font_bold = new Font("Arial",Font.BOLD,16);
       
         

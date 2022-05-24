@@ -22,7 +22,7 @@ public class UnderTwentyDisplay extends Frame
         txt_availability_uttd = new TextField();
         btn_next_uttd = new Button("next");
         btn_prev_uttd= new Button("prev");
-        btn_hom_uttd = new Button("HOME");
+        btn_hom_uttd = new Button("HOME PAGE");
         lbl_disease = new Label("Disease");
         lbl_drug_name = new Label("Drug Name");
         lbl_expiry = new Label("Expiry");

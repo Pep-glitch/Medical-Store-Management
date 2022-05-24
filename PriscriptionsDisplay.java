@@ -7,7 +7,7 @@ public class PriscriptionsDisplay extends Frame
 {
     Checkbox symp_one,symp_two,symp_three,symp_four,symp_five,symp_six,symp_seven,symp_eight,symp_nine,symp_ten;
     Font font_bold;
-    Button btn_dosage;
+    Button btn_dosage,btn_back;
     Label lbl_symptoms;
     // TextField txtbox;
     MyActionListener ml = new MyActionListener(this);
@@ -28,9 +28,11 @@ public class PriscriptionsDisplay extends Frame
         symp_nine = new Checkbox("cough");
         symp_ten = new Checkbox("heat");
         btn_dosage = new Button("DOSAGE");
+        btn_back = new Button("BACK");
         lbl_symptoms = new Label("SYMPTOMS");
         font_bold = new Font("Arial",Font.BOLD,16);
 
+        lbl_symptoms.setBounds(200,50,200,50);
         symp_one.setBounds(100,100,200,50);
         symp_two.setBounds(100,160,200,50);
         symp_three.setBounds(100,220,200,50);
@@ -42,7 +44,7 @@ public class PriscriptionsDisplay extends Frame
         symp_nine.setBounds(320,280,200,50);
         symp_ten.setBounds(320,340,200,50);
         btn_dosage.setBounds(200,400,150,60);
-        lbl_symptoms.setBounds(200,50,200,50);
+        btn_back.setBounds(200,470,150,60);
 
         symp_one.setFont(font_bold);
         symp_two.setFont(font_bold);
@@ -55,6 +57,7 @@ public class PriscriptionsDisplay extends Frame
         symp_nine.setFont(font_bold);
         symp_ten.setFont(font_bold);
         btn_dosage.setFont(font_bold);
+        btn_back.setFont(font_bold);
         lbl_symptoms.setFont(font_bold);
 
         
@@ -69,6 +72,7 @@ public class PriscriptionsDisplay extends Frame
         add(symp_nine);
         add(symp_ten);
         add(btn_dosage);
+        add(btn_back);
         add( lbl_symptoms);
         
         symp_one.addItemListener(ml);
@@ -82,6 +86,7 @@ public class PriscriptionsDisplay extends Frame
         symp_nine.addItemListener(ml);
         symp_ten.addItemListener(ml);
         btn_dosage.addActionListener(ml);
+        btn_back.addActionListener(ml);
         addWindowListener(new WindowAdapter()
 			{
 				public void windowClosing(WindowEvent we)

@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
+
+//import pharmacy.DosageDisplay;
 public class MyActionListener implements ActionListener,ItemListener
 {
     Display dp;
@@ -20,6 +22,8 @@ public class MyActionListener implements ActionListener,ItemListener
     PhysiologicalDisplay physiologicalObject;
     InfectiousDisplay infectiousObject;
     HereditaryDisplay hereditaryObject;
+    ReportTypeDisplay reportTypeObject;
+    DosageDisplay dosageObject;
     MyActionListener(Display d)
     {
         this.dp=d;
@@ -80,6 +84,14 @@ public class MyActionListener implements ActionListener,ItemListener
     {
        this.hereditaryObject = hd; 
     }
+    MyActionListener(ReportTypeDisplay rtd)
+    {
+        this.reportTypeObject = rtd;
+    }
+    MyActionListener(DosageDisplay dsgd)
+    {
+        this.dosageObject =dsgd;
+    }
      public void itemStateChanged(ItemEvent ie)
     {
 
@@ -101,6 +113,8 @@ public class MyActionListener implements ActionListener,ItemListener
         PhysiologicalDisplay physiologicalObject = new PhysiologicalDisplay();
         InfectiousDisplay infectiousObject = new  InfectiousDisplay();
         HereditaryDisplay hereditaryObject = new  HereditaryDisplay();
+        ReportTypeDisplay reportTypeObject = new ReportTypeDisplay();
+        DosageDisplay dosageObject = new DosageDisplay();
         if(e.getActionCommand().equals("Log In"))
         {
             this.dp.setVisible(false);
@@ -126,13 +140,6 @@ public class MyActionListener implements ActionListener,ItemListener
           this.drugsObject.setVisible(false);
           dp.setVisible(true);
        }
-       /*
-       if(e.getActionCommand().equals("HOME"))
-       {
-        // this.drugsObject.setVisible(false);
-          mainDisplayObject.setVisible(true);
-       }
-       */
        if(e.getActionCommand().equals("0-10"))
        {
            this. ageBasedObject.setVisible(false);
@@ -183,135 +190,237 @@ public class MyActionListener implements ActionListener,ItemListener
             this.mainDisplayObject.setVisible(false);
             reportObject.setVisible(true);
        }
-       if(e.getActionCommand().equals(""))
+       if(e.getActionCommand().equals("HOME PAGE"))
        {
-
+            this.underTwentyObject.setVisible(false);
+            mainDisplayObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("MAIN"))
+       {
+            this.overFortyObject.setVisible(false);
+            mainDisplayObject.setVisible(true); 
+       }
+       if(e.getActionCommand().equals("HOME VIEW"))
+       {
+            this.underFortyObject.setVisible(false);
+            mainDisplayObject.setVisible(true);  
+       }
+       if(e.getActionCommand().equals("HOME"))
+       {
+           this.underTenObject.setVisible(false);
+           mainDisplayObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("START"))
+       {
+          this.infectiousObject.setVisible(false);
+          mainDisplayObject.setVisible(true);  
+       }
+       if(e.getActionCommand().equals("START PAGE"))
+       {
+           this.deficiencyObject.setVisible(false);
+           mainDisplayObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("START VIEW"))
+       {
+           this.hereditaryObject.setVisible(false);
+           mainDisplayObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("FIRST PAGE"))
+       {
+           this.physiologicalObject.setVisible(false);
+           mainDisplayObject.setVisible(true);  
+       }
+       if(e.getActionCommand().equals("FRONT PAGE"))
+       {
+            this.ageBasedObject.setVisible(false);  
+            mainDisplayObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("FRONT VIEW"))
+       {
+            this.diseaseObject.setVisible(false); 
+            mainDisplayObject.setVisible(true); 
+       }
+       if(e.getActionCommand().equals("FIRST VIEW"))
+       {
+             this.drugsObject.setVisible(false);
+             mainDisplayObject.setVisible(true); 
+       }
+       if(e.getActionCommand().equals("BACK"))
+       {
+             this.prisciptionsObject.setVisible(false); 
+             mainDisplayObject.setVisible(true); 
+       }
+       if(e.getActionCommand().equals("RETURN"))
+       {
+            this.reportObject.setVisible(false); 
+            mainDisplayObject.setVisible(true);  
+       }
+       if(e.getActionCommand().equals("CLOSE"))
+       { 
+             System.exit(0); 
+       }
+       if(e.getActionCommand().equals("DOSAGE"))
+       {
+            this.prisciptionsObject.setVisible(false);
+            dosageObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("GET REPORT"))
+       {
+            this.reportObject.setVisible(false); 
+            reportTypeObject.setVisible(true); 
+       }
+       if(e.getActionCommand().equals("CANCEL"))
+       {
+           this.dosageObject.setVisible(false);
+           mainDisplayObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("SAVE"))
+       {
+         //Write to file as Administered Dosage.  
        }
        if(e.getActionCommand().equals(""))
        {
-
+    
+       }
+       if(e.getActionCommand().equals(""))
+       {
+           
+       }
+       if(e.getActionCommand().equals(""))
+       {
+           
+       }
+       if(e.getActionCommand().equals(""))
+       {
+           
+       }
+       if(e.getActionCommand().equals(""))
+       {
+           
        }
 
        //for Under Ten frame
+       /*
        if(e.getSource().equals(this.underTenObject.btn_hom_utd))
        {
                 this.underTenObject.setVisible(false);
                 mainDisplayObject.setVisible(true);
        }
-       if(e.getSource()== underTenObject.btn_next_utd)
+       if(e.getSource().equals(this.underTenObject.btn_next_utd))
        {
 
        }
-       if(e.getSource()== underTenObject.btn_prev_utd)
+       if(e.getSource().equals(this.underTenObject.btn_prev_utd))
        {
 
        }
 
       //for Under Twenty Frame
       //getName()
-      if(e.getSource()==underTwentyObject.btn_hom_uttd)
+       else if(e.getSource().equals(this.underTwentyObject.btn_hom_uttd))
       {
               this.underTwentyObject.setVisible(false);
               mainDisplayObject.setVisible(true);
       }
-      if(e.getSource()==underTwentyObject.btn_next_uttd)
+      if(e.getSource().equals(this.underTwentyObject.btn_next_uttd))
       {
           
       }
-      if(e.getSource()==underTwentyObject.btn_prev_uttd)
+      if(e.getSource().equals(this.underTwentyObject.btn_prev_uttd))
       {
           
       }
 
       //for Under Forty frame
-      if(e.getSource()==underFortyObject.btn_hom_ufd)
+      if(e.getSource().equals(this.underFortyObject.btn_hom_ufd))
       {
                this.underFortyObject.setVisible(false);
                mainDisplayObject.setVisible(true);  
       }
-      if(e.getSource()==underFortyObject.btn_next_ufd)
+      if(e.getSource().equals(this.underFortyObject.btn_next_ufd))
       {
           
       }
-      if(e.getSource()==underFortyObject.btn_prev_ufd)
+      if(e.getSource().equals(this.underFortyObject.btn_prev_ufd))
       {
           
       }
 
       //for OverForty Frame
-      if(e.getSource()==overFortyObject.btn_hom_ofd)
+      if(e.getSource().equals(this.overFortyObject.btn_hom_ofd))
       {
                this.overFortyObject.setVisible(false);
                mainDisplayObject.setVisible(true);
       }
-      if(e.getSource()==overFortyObject.btn_next)
+      if(e.getSource().equals(this.overFortyObject.btn_next))
       {
           
       }
-      if(e.getSource()==overFortyObject.btn_prev)
+      if(e.getSource().equals(this.overFortyObject.btn_prev))
       {
           
       }
 
       //for Infectious Frame
-      if(e.getSource()==infectiousObject.btn_hom_id)
+      if(e.getSource().equals(this.infectiousObject.btn_hom_id))
       {
               this.infectiousObject.setVisible(false);
               mainDisplayObject.setVisible(true);
       }
-      if(e.getSource()==infectiousObject.btn_next)
+      if(e.getSource().equals(this.infectiousObject.btn_next))
       {
           
       }
-      if(e.getSource()==infectiousObject.btn_prev)
+      if(e.getSource().equals(this.infectiousObject.btn_prev))
       {
           
       }
 
       //for Deficiency Frame
-      if(e.getSource()==deficiencyObject.btn_hom_dd)
+      if(e.getSource().equals(this.deficiencyObject.btn_hom_dd))
       {
               this.deficiencyObject.setVisible(false);
               mainDisplayObject.setVisible(true);
       }
-      if(e.getSource()==deficiencyObject.btn_next)
+      if(e.getSource().equals(this.deficiencyObject.btn_next))
       {
           
       }
-      if(e.getSource()==deficiencyObject.btn_prev)
+      if(e.getSource().equals(this.deficiencyObject.btn_prev))
       {
           
       }
 
       //for Hereditary Frame
-      if(e.getSource()== hereditaryObject.btn_hom_hd)
+      if(e.getSource().equals(this.hereditaryObject.btn_hom_hd))
       {
             this.hereditaryObject.setVisible(false);
             mainDisplayObject.setVisible(true);
       }
-      if(e.getSource()== hereditaryObject.btn_next)
+      if(e.getSource().equals(this.hereditaryObject.btn_next))
       {
           
       }
-      if(e.getSource()== hereditaryObject.btn_prev)
+      if(e.getSource().equals(this.hereditaryObject.btn_prev))
       {
           
       }
 
       //for Phsiological Frame
-      if(e.getSource()== physiologicalObject.btn_hom_pyd)
+      if(e.getSource().equals(this.physiologicalObject.btn_hom_pyd))
       {
                this.physiologicalObject.setVisible(false);
                mainDisplayObject.setVisible(true); 
       }
-      if(e.getSource()== physiologicalObject.btn_next)
+      if(e.getSource().equals(this.physiologicalObject.btn_next))
       {
           
       }
-      if(e.getSource()== physiologicalObject.btn_prev)
+      if(e.getSource().equals(this.physiologicalObject.btn_prev))
       {
           
       }
+      */
     }
     
 }

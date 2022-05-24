@@ -18,7 +18,7 @@ public class AgeBasedDisplay extends Frame
         btn_ten_twenty = new Button("10-20");
         btn_twenty_forty = new Button("20-40");
         btn_forty_plus = new Button("40+");
-        btn_home = new Button("HOME");
+        btn_home = new Button("FRONT PAGE");
         font_bold = new Font("Arial",Font.BOLD,16);
 
         btn_zero_ten.setBounds(100,100,300,50);
