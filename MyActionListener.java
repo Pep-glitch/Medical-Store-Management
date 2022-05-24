@@ -115,6 +115,8 @@ public class MyActionListener implements ActionListener,ItemListener
         HereditaryDisplay hereditaryObject = new  HereditaryDisplay();
         ReportTypeDisplay reportTypeObject = new ReportTypeDisplay();
         DosageDisplay dosageObject = new DosageDisplay();
+
+
         if(e.getActionCommand().equals("Log In"))
         {
             this.dp.setVisible(false);
@@ -190,46 +192,6 @@ public class MyActionListener implements ActionListener,ItemListener
             this.mainDisplayObject.setVisible(false);
             reportObject.setVisible(true);
        }
-       if(e.getActionCommand().equals("HOME PAGE"))
-       {
-            this.underTwentyObject.setVisible(false);
-            mainDisplayObject.setVisible(true);
-       }
-       if(e.getActionCommand().equals("MAIN"))
-       {
-            this.overFortyObject.setVisible(false);
-            mainDisplayObject.setVisible(true); 
-       }
-       if(e.getActionCommand().equals("HOME VIEW"))
-       {
-            this.underFortyObject.setVisible(false);
-            mainDisplayObject.setVisible(true);  
-       }
-       if(e.getActionCommand().equals("HOME"))
-       {
-           this.underTenObject.setVisible(false);
-           mainDisplayObject.setVisible(true);
-       }
-       if(e.getActionCommand().equals("START"))
-       {
-          this.infectiousObject.setVisible(false);
-          mainDisplayObject.setVisible(true);  
-       }
-       if(e.getActionCommand().equals("START PAGE"))
-       {
-           this.deficiencyObject.setVisible(false);
-           mainDisplayObject.setVisible(true);
-       }
-       if(e.getActionCommand().equals("START VIEW"))
-       {
-           this.hereditaryObject.setVisible(false);
-           mainDisplayObject.setVisible(true);
-       }
-       if(e.getActionCommand().equals("FIRST PAGE"))
-       {
-           this.physiologicalObject.setVisible(false);
-           mainDisplayObject.setVisible(true);  
-       }
        if(e.getActionCommand().equals("FRONT PAGE"))
        {
             this.ageBasedObject.setVisible(false);  
@@ -276,151 +238,144 @@ public class MyActionListener implements ActionListener,ItemListener
        }
        if(e.getActionCommand().equals("SAVE"))
        {
+           JOptionPane.showMessageDialog(null, "Administered Dosage Successfully","Dosage", JOptionPane.INFORMATION_MESSAGE);
+           this.dosageObject.setVisible(false);
+           prisciptionsObject.setVisible(true);
          //Write to file as Administered Dosage.  
        }
-       if(e.getActionCommand().equals(""))
+       //for under ten
+       if(e.getActionCommand().equals("HOME"))
        {
-    
+           this.underTenObject.setVisible(false);
+           mainDisplayObject.setVisible(true);
        }
-       if(e.getActionCommand().equals(""))
+       if(e.getActionCommand().equals("next"))
        {
-           
+            this.underTenObject.txt_disease_utd.setText("Lighton");
        }
-       if(e.getActionCommand().equals(""))
-       {
-           
-       }
-       if(e.getActionCommand().equals(""))
+       if(e.getActionCommand().equals("prev"))
        {
            
        }
-       if(e.getActionCommand().equals(""))
+       //for under twenty
+       if(e.getActionCommand().equals("HOME PAGE"))
+       {
+            this.underTwentyObject.setVisible(false);
+            mainDisplayObject.setVisible(true);
+       }
+       if(e.getActionCommand().equals("next."))
+       {
+          this.underTwentyObject.txt_disease_uttd.setText("Under Twenty"); 
+       }
+       if(e.getActionCommand().equals("prev."))
        {
            
        }
-
-       //for Under Ten frame
-       /*
-       if(e.getSource().equals(this.underTenObject.btn_hom_utd))
+       //for under forty
+       if(e.getActionCommand().equals("HOME VIEW"))
        {
-                this.underTenObject.setVisible(false);
-                mainDisplayObject.setVisible(true);
+            this.underFortyObject.setVisible(false);
+            mainDisplayObject.setVisible(true);  
        }
-       if(e.getSource().equals(this.underTenObject.btn_next_utd))
+       if(e.getActionCommand().equals(".next"))
        {
-
+           this.underFortyObject.txt_disease_ufd.setText("Under forty");
        }
-       if(e.getSource().equals(this.underTenObject.btn_prev_utd))
+       if(e.getActionCommand().equals(".prev"))
        {
-
+           
        }
-
-      //for Under Twenty Frame
-      //getName()
-       else if(e.getSource().equals(this.underTwentyObject.btn_hom_uttd))
-      {
-              this.underTwentyObject.setVisible(false);
-              mainDisplayObject.setVisible(true);
-      }
-      if(e.getSource().equals(this.underTwentyObject.btn_next_uttd))
-      {
-          
-      }
-      if(e.getSource().equals(this.underTwentyObject.btn_prev_uttd))
-      {
-          
-      }
-
-      //for Under Forty frame
-      if(e.getSource().equals(this.underFortyObject.btn_hom_ufd))
-      {
-               this.underFortyObject.setVisible(false);
-               mainDisplayObject.setVisible(true);  
-      }
-      if(e.getSource().equals(this.underFortyObject.btn_next_ufd))
-      {
-          
-      }
-      if(e.getSource().equals(this.underFortyObject.btn_prev_ufd))
-      {
-          
-      }
-
-      //for OverForty Frame
-      if(e.getSource().equals(this.overFortyObject.btn_hom_ofd))
-      {
-               this.overFortyObject.setVisible(false);
-               mainDisplayObject.setVisible(true);
-      }
-      if(e.getSource().equals(this.overFortyObject.btn_next))
-      {
-          
-      }
-      if(e.getSource().equals(this.overFortyObject.btn_prev))
-      {
-          
-      }
-
-      //for Infectious Frame
-      if(e.getSource().equals(this.infectiousObject.btn_hom_id))
-      {
-              this.infectiousObject.setVisible(false);
-              mainDisplayObject.setVisible(true);
-      }
-      if(e.getSource().equals(this.infectiousObject.btn_next))
-      {
-          
-      }
-      if(e.getSource().equals(this.infectiousObject.btn_prev))
-      {
-          
-      }
-
-      //for Deficiency Frame
-      if(e.getSource().equals(this.deficiencyObject.btn_hom_dd))
-      {
-              this.deficiencyObject.setVisible(false);
-              mainDisplayObject.setVisible(true);
-      }
-      if(e.getSource().equals(this.deficiencyObject.btn_next))
-      {
-          
-      }
-      if(e.getSource().equals(this.deficiencyObject.btn_prev))
-      {
-          
-      }
-
-      //for Hereditary Frame
-      if(e.getSource().equals(this.hereditaryObject.btn_hom_hd))
-      {
+       //for above forty
+       if(e.getActionCommand().equals("MAIN"))
+       {
+            this.overFortyObject.setVisible(false);
+            mainDisplayObject.setVisible(true); 
+       }
+       if(e.getActionCommand().equals("next,"))
+       {
+          this.overFortyObject.txt_disease_ofd.setText("above 40"); 
+       }  
+       if(e.getActionCommand().equals("prev,"))
+       {
+           
+       }
+       //for phsiological diseases
+       if(e.getActionCommand().equals("FIRST PAGE"))
+       {
+           this.physiologicalObject.setVisible(false);
+           mainDisplayObject.setVisible(true);  
+       }
+       if(e.getActionCommand().equals("next-"))
+       {
+           
+       }
+       if(e.getActionCommand().equals("-prev"))
+       {
+           
+       }
+        //for hereditary diseases
+        if(e.getActionCommand().equals("START VIEW"))
+        {
             this.hereditaryObject.setVisible(false);
             mainDisplayObject.setVisible(true);
-      }
-      if(e.getSource().equals(this.hereditaryObject.btn_next))
-      {
-          
-      }
-      if(e.getSource().equals(this.hereditaryObject.btn_prev))
-      {
-          
-      }
+        }
+       if(e.getActionCommand().equals(",next"))
+       {
+           
+       }
+       if(e.getActionCommand().equals(",prev"))
+       {
+           
+       }
+        //for deficiency diseases
+        if(e.getActionCommand().equals("START PAGE"))
+        {
+            this.deficiencyObject.setVisible(false);
+            mainDisplayObject.setVisible(true);
+        }
+       if(e.getActionCommand().equals("-next"))
+       {
+           
+       }
+       if(e.getActionCommand().equals("prev-"))
+       {
+           
+       }
+        //for infectious diseases
+        if(e.getActionCommand().equals("START"))
+        {
+           this.infectiousObject.setVisible(false);
+           mainDisplayObject.setVisible(true);  
+        }
+       if(e.getActionCommand().equals(".next."))
+       {
+           
+       }
+       if(e.getActionCommand().equals(".prev."))
+       {
+           
+       }
+       if(e.getActionCommand().equals(""))
+       {
+           
+       }
+       if(e.getActionCommand().equals(""))
+       {
+           
+       }
+       if(e.getActionCommand().equals(""))
+       {
+           
+       }
+       if(e.getActionCommand().equals(""))
+       {
+           
+       }
+       if(e.getActionCommand().equals(""))
+       {
+           
+       }
 
-      //for Phsiological Frame
-      if(e.getSource().equals(this.physiologicalObject.btn_hom_pyd))
-      {
-               this.physiologicalObject.setVisible(false);
-               mainDisplayObject.setVisible(true); 
-      }
-      if(e.getSource().equals(this.physiologicalObject.btn_next))
-      {
-          
-      }
-      if(e.getSource().equals(this.physiologicalObject.btn_prev))
-      {
-          
-      }
-      */
     }
     
 }

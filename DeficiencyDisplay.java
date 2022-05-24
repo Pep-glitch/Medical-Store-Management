@@ -22,8 +22,8 @@ public class DeficiencyDisplay extends Frame
         txt_drug_name_dd = new TextField();
         txt_expiry_dd = new TextField();
         txt_availability_dd = new TextField();
-        btn_next  = new Button("next");
-        btn_prev = new Button("prev");
+        btn_next  = new Button("-next");
+        btn_prev = new Button("prev-");
         btn_hom_dd = new Button("START PAGE");
         lbl_disease = new Label("Disease");
         lbl_drug_name = new Label("Drug Name");

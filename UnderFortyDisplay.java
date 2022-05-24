@@ -20,8 +20,8 @@ public class UnderFortyDisplay extends Frame
         txt_drug_name_ufd = new TextField();
         txt_expiry_ufd = new TextField();
         txt_availability_ufd = new TextField();
-        btn_next_ufd  = new Button("next");
-        btn_prev_ufd = new Button("prev");
+        btn_next_ufd  = new Button(".next");
+        btn_prev_ufd = new Button(".prev");
         btn_hom_ufd = new Button("HOME VIEW");
         lbl_disease = new Label("Disease");
         lbl_drug_name = new Label("Drug Name");

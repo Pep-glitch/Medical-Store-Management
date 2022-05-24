@@ -22,8 +22,8 @@ public class InfectiousDisplay extends Frame
         txt_drug_name_id = new TextField();
         txt_expiry_id = new TextField();
         txt_availability_id = new TextField();
-        btn_next  = new Button("next");
-        btn_prev = new Button("prev");
+        btn_next  = new Button(".next.");
+        btn_prev = new Button(".prev.");
         btn_hom_id = new Button("START");
         lbl_disease = new Label("Disease");
         lbl_drug_name = new Label("Drug Name");

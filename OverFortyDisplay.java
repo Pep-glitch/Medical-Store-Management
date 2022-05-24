@@ -20,8 +20,8 @@ public class OverFortyDisplay extends Frame
         txt_drug_name_ofd = new TextField();
         txt_expiry_ofd = new TextField();
         txt_availability_ofd = new TextField();
-        btn_next  = new Button("next");
-        btn_prev = new Button("prev");
+        btn_next  = new Button("next,");
+        btn_prev = new Button("prev,");
         btn_hom_ofd = new Button("MAIN");
         lbl_disease = new Label("Disease");
         lbl_drug_name = new Label("Drug Name");
