@@ -3,7 +3,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
-import java.lang.*;
 public class AgeBasedDisplay extends Frame 
 {
     Button btn_zero_ten,btn_ten_twenty,btn_twenty_forty,btn_forty_plus,btn_home;
@@ -11,7 +10,7 @@ public class AgeBasedDisplay extends Frame
     MyActionListener ml = new MyActionListener(this);
     AgeBasedDisplay()
     {
-        super();
+        super("Age Groups");
         setLayout(null);
         setBounds(0,0,600,500);
         

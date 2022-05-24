@@ -10,7 +10,7 @@ public class MainDisplay extends Frame
     MyActionListener ml = new MyActionListener(this);
     MainDisplay()
     {
-        super();
+        super("HOME");
         setLayout(null);
         setBounds(0,0,500,500);
         

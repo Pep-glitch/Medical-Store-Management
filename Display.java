@@ -4,7 +4,6 @@ import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
 import java.awt.Color.*;
-import java.lang.*;
 public class Display extends Frame
 {
     TextField txt_admin_id,txt_admin_pass;
@@ -16,7 +15,7 @@ public class Display extends Frame
     MyActionListener ml = new MyActionListener(this);
     Display()
     {
-        super();
+        super("Admin Log In");
         setLayout(null);
         setBounds(0,0,600,500);
 

@@ -11,7 +11,7 @@ public class DrugsDisplay extends Frame
     MyActionListener ml = new MyActionListener(this);
     DrugsDisplay()
     {
-        super();
+        super("Drug Categories");
         setLayout(null);
         setBounds(0,0,600,500);
         

@@ -12,7 +12,7 @@ public class OverFortyDisplay extends Frame
     MyActionListener ml = new MyActionListener(this);
     OverFortyDisplay()
     {
-        super();
+        super("Age Above 40");
         setLayout(null);
         setBounds(0,0,500,500);
 

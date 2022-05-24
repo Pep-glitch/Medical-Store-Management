@@ -3,7 +3,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
-import java.lang.*;
 public class ReportsDisplay extends Frame 
 {
     TextField txt_email;
@@ -13,7 +12,7 @@ public class ReportsDisplay extends Frame
     MyActionListener ml = new MyActionListener(this);
     ReportsDisplay()
     {
-        super();
+        super("Reports");
         setLayout(null);
         setBounds(0,0,600,500);
 

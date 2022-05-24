@@ -3,7 +3,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
-import java.lang.*;
 public class DiseaseBasedDisplay extends Frame 
 {
     Button btn_infectious,btn_deficiency,btn_hereditary,btn_physiological,btn_home;
@@ -11,7 +10,7 @@ public class DiseaseBasedDisplay extends Frame
     MyActionListener ml = new MyActionListener(this);
     DiseaseBasedDisplay()
     {
-        super();
+        super("Disease Categories");
         setLayout(null);
         setBounds(0,0,600,500);
         

@@ -12,7 +12,7 @@ public class UnderTwentyDisplay extends Frame
     MyActionListener ml = new MyActionListener(this);
     UnderTwentyDisplay()
     {
-        super();
+        super("Age 10-20");
         setLayout(null);
         setBounds(0,0,500,500);
 

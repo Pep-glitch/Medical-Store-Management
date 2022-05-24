@@ -126,11 +126,13 @@ public class MyActionListener implements ActionListener,ItemListener
           this.drugsObject.setVisible(false);
           dp.setVisible(true);
        }
+       /*
        if(e.getActionCommand().equals("HOME"))
        {
         // this.drugsObject.setVisible(false);
           mainDisplayObject.setVisible(true);
        }
+       */
        if(e.getActionCommand().equals("0-10"))
        {
            this. ageBasedObject.setVisible(false);
@@ -191,9 +193,10 @@ public class MyActionListener implements ActionListener,ItemListener
        }
 
        //for Under Ten frame
-       if(e.getSource()== underTenObject.btn_hom_utd)
+       if(e.getSource().equals(this.underTenObject.btn_hom_utd))
        {
-
+                this.underTenObject.setVisible(false);
+                mainDisplayObject.setVisible(true);
        }
        if(e.getSource()== underTenObject.btn_next_utd)
        {
@@ -205,9 +208,11 @@ public class MyActionListener implements ActionListener,ItemListener
        }
 
       //for Under Twenty Frame
+      //getName()
       if(e.getSource()==underTwentyObject.btn_hom_uttd)
       {
-
+              this.underTwentyObject.setVisible(false);
+              mainDisplayObject.setVisible(true);
       }
       if(e.getSource()==underTwentyObject.btn_next_uttd)
       {
@@ -221,7 +226,8 @@ public class MyActionListener implements ActionListener,ItemListener
       //for Under Forty frame
       if(e.getSource()==underFortyObject.btn_hom_ufd)
       {
-          
+               this.underFortyObject.setVisible(false);
+               mainDisplayObject.setVisible(true);  
       }
       if(e.getSource()==underFortyObject.btn_next_ufd)
       {
@@ -235,7 +241,8 @@ public class MyActionListener implements ActionListener,ItemListener
       //for OverForty Frame
       if(e.getSource()==overFortyObject.btn_hom_ofd)
       {
-          
+               this.overFortyObject.setVisible(false);
+               mainDisplayObject.setVisible(true);
       }
       if(e.getSource()==overFortyObject.btn_next)
       {
@@ -247,57 +254,61 @@ public class MyActionListener implements ActionListener,ItemListener
       }
 
       //for Infectious Frame
-      if(e.getSource()==infectiousObject)
+      if(e.getSource()==infectiousObject.btn_hom_id)
+      {
+              this.infectiousObject.setVisible(false);
+              mainDisplayObject.setVisible(true);
+      }
+      if(e.getSource()==infectiousObject.btn_next)
       {
           
       }
-      if(e.getSource()==infectiousObject)
-      {
-          
-      }
-      if(e.getSource()==infectiousObject)
+      if(e.getSource()==infectiousObject.btn_prev)
       {
           
       }
 
       //for Deficiency Frame
-      if(e.getSource()==deficiencyObject)
+      if(e.getSource()==deficiencyObject.btn_hom_dd)
+      {
+              this.deficiencyObject.setVisible(false);
+              mainDisplayObject.setVisible(true);
+      }
+      if(e.getSource()==deficiencyObject.btn_next)
       {
           
       }
-      if(e.getSource()==deficiencyObject)
-      {
-          
-      }
-      if(e.getSource()==deficiencyObject)
+      if(e.getSource()==deficiencyObject.btn_prev)
       {
           
       }
 
       //for Hereditary Frame
-      if(e.getSource()== hereditaryObject)
+      if(e.getSource()== hereditaryObject.btn_hom_hd)
+      {
+            this.hereditaryObject.setVisible(false);
+            mainDisplayObject.setVisible(true);
+      }
+      if(e.getSource()== hereditaryObject.btn_next)
       {
           
       }
-      if(e.getSource()== hereditaryObject)
-      {
-          
-      }
-      if(e.getSource()== hereditaryObject)
+      if(e.getSource()== hereditaryObject.btn_prev)
       {
           
       }
 
       //for Phsiological Frame
-      if(e.getSource()== physiologicalObject)
+      if(e.getSource()== physiologicalObject.btn_hom_pyd)
+      {
+               this.physiologicalObject.setVisible(false);
+               mainDisplayObject.setVisible(true); 
+      }
+      if(e.getSource()== physiologicalObject.btn_next)
       {
           
       }
-      if(e.getSource()== physiologicalObject)
-      {
-          
-      }
-      if(e.getSource()== physiologicalObject)
+      if(e.getSource()== physiologicalObject.btn_prev)
       {
           
       }

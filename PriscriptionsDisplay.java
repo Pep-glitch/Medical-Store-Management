@@ -3,7 +3,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
-import java.lang.*;
 public class PriscriptionsDisplay extends Frame 
 {
     Checkbox symp_one,symp_two,symp_three,symp_four,symp_five,symp_six,symp_seven,symp_eight,symp_nine,symp_ten;
@@ -14,7 +13,7 @@ public class PriscriptionsDisplay extends Frame
     MyActionListener ml = new MyActionListener(this);
     PriscriptionsDisplay()
     {
-        super();
+        super("Priscriptions");
         setLayout(null);
         setBounds(0,0,600,600);
         

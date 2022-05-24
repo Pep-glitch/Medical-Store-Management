@@ -12,7 +12,7 @@ public class UnderFortyDisplay extends Frame
     MyActionListener ml = new MyActionListener(this);
     UnderFortyDisplay()
     {
-        super();
+        super("Age 20-40");
         setLayout(null);
         setBounds(0,0,500,500);
 
