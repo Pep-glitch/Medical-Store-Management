@@ -38,26 +38,29 @@ public class Admin
         fr1.close();
         String id = new String(ch1);
 
+        
         //ch for used pass in login screem
         char ch2[] = new char[30];
         FileReader fr2 = new FileReader("admintest/logpass.txt");
         fr2.read(ch2);
         fr2.close();
         String pass = new String(ch2);
-        if(admin_det[0].equalsIgnoreCase(id) && admin_det[1].equalsIgnoreCase(pass))
+        Integer  num_4_id = Integer .parseInt(admin_det[0].trim());
+        Integer num_4_pass = Integer.parseInt(admin_det[1].trim());
+        Integer  test_num_4_id =Integer .parseInt(id.trim());
+        Integer test_num_4_pass = Integer.parseInt(pass.trim());
+        if(num_4_id==test_num_4_id && num_4_pass==test_num_4_pass)
         {
-          return true;
+            return true;
         }
         else
         {
-          return false;
-        }
-      
-      
+           return false;
+        } 
     }
     public static void main(String args[])
     {
-      Admin ad1 = new Admin(24, "was45red");
+      Admin ad1 = new Admin(20, "20");
       String object_value = ad1.toString();
       try {
        FileWriter fw = new FileWriter("admin/login.txt");

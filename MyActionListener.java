@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
-
+import java.util.*;
 //import pharmacy.DosageDisplay;
 public class MyActionListener implements ActionListener,ItemListener
 {
@@ -24,6 +24,17 @@ public class MyActionListener implements ActionListener,ItemListener
     HereditaryDisplay hereditaryObject;
     ReportTypeDisplay reportTypeObject;
     DosageDisplay dosageObject;
+    AddingDrugDisplay addDrugObject;
+    ArrayList <Deficiency> deficiency = new ArrayList<Deficiency>();
+    ArrayList <Infectious> infectious = new ArrayList<Infectious>();
+    ArrayList <Hereditary> hereditary = new ArrayList<Hereditary>();
+    ArrayList <Phsiological> phsiological = new ArrayList<Phsiological>();
+    ArrayList <UnderTenDrugs> underTenDrugs = new ArrayList<UnderTenDrugs>();
+    ArrayList <UnderTwentyDrugs> underTwentyDrugs  = new ArrayList<UnderTwentyDrugs>();
+    ArrayList <UnderFortyDrugs> underFortyDrugs = new ArrayList<UnderFortyDrugs>();
+    ArrayList <OverFortyDrugs> overFortyDrugs = new ArrayList<OverFortyDrugs>();
+    ArrayList <Drugs> drugs = new ArrayList<Drugs>();
+
     MyActionListener(Display d)
     {
         this.dp=d;
@@ -92,6 +103,10 @@ public class MyActionListener implements ActionListener,ItemListener
     {
         this.dosageObject =dsgd;
     }
+    MyActionListener(AddingDrugDisplay add)
+    {
+        this.addDrugObject = add;
+    }
      public void itemStateChanged(ItemEvent ie)
     {
 
@@ -115,17 +130,19 @@ public class MyActionListener implements ActionListener,ItemListener
         HereditaryDisplay hereditaryObject = new  HereditaryDisplay();
         ReportTypeDisplay reportTypeObject = new ReportTypeDisplay();
         DosageDisplay dosageObject = new DosageDisplay();
+        AddingDrugDisplay addDrugObject = new AddingDrugDisplay();
 
 
         if(e.getActionCommand().equals("Log In"))
         {
-            System.out.println(dp.txt_admin_id.getText());
+            System.out.println(this.dp.txt_admin_id.getText());
+            System.out.println(this.dp.txt_admin_pass.getText());
             try {
                 FileWriter fw = new FileWriter("admintest/logid.txt");
-                fw.write(dp. txt_admin_id.getText());
+                fw.write(this.dp. txt_admin_id.getText());
                 fw.close();
                 FileWriter fw2 = new FileWriter("admintest/logpass.txt");
-                fw2.write(dp.txt_admin_pass.getText());
+                fw2.write(this.dp.txt_admin_pass.getText());
                 fw2.close();
                 if(Admin.validate_user()==true)
                 {
@@ -156,10 +173,10 @@ public class MyActionListener implements ActionListener,ItemListener
            this.drugsObject.setVisible(false);
            diseaseObject.setVisible(true);
        }
-       if(e.getActionCommand().equals("GENERIC"))
+       if(e.getActionCommand().equals("ADD DRUG"))
        {
           this.drugsObject.setVisible(false);
-          dp.setVisible(true);
+          addDrugObject.setVisible(true);
        }
        if(e.getActionCommand().equals("0-10"))
        {
@@ -374,13 +391,23 @@ public class MyActionListener implements ActionListener,ItemListener
        {
            
        }
-       if(e.getActionCommand().equals(""))
+       if(e.getActionCommand().equals("Add"))
        {
-           
+             
+             drugs.add(new Drugs(this.addDrugObject.txt_drug_name.getText(),this. addDrugObject.txt_expiry.getText(),Integer.parseInt(this. addDrugObject.txt_amount.getText())));
+             System.out.println(drugs);
+             try {
+                FileWriter fw = new FileWriter("drug1.txt");
+                fw.write(drugs.toString());
+                fw.close();
+             } catch (Exception xc) {
+                JOptionPane.showMessageDialog(null, xc);
+             }
        }
-       if(e.getActionCommand().equals(""))
+       if(e.getActionCommand().equals("Discard"))
        {
-           
+             this.addDrugObject.setVisible(false);
+             drugsObject.setVisible(true);
        }
        if(e.getActionCommand().equals(""))
        {

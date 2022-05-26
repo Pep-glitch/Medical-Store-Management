@@ -16,7 +16,7 @@ public class DrugsDisplay extends Frame
         
         btn_by_age = new Button("AGE GROUPS");
         btn_disease= new Button("DISEASE TYPE");
-        btn_general= new Button("GENERIC");
+        btn_general= new Button("ADD DRUG");
         btn_home = new Button("FIRST VIEW");
         font_bold = new Font("Arial",Font.BOLD,16);
 
