@@ -15,7 +15,7 @@ public class PriscriptionsDisplay extends Frame
     {
         super("Priscriptions");
         setLayout(null);
-        setBounds(0,0,600,600);
+        setBounds(460,130,600,600);
         
         symp_one = new Checkbox("Head pain");
         symp_two = new Checkbox("Neck pain");

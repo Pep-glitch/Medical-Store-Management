@@ -15,7 +15,7 @@ public class InfectiousDisplay extends Frame
     {
         super("Infectious Diseases");
         setLayout(null);
-        setBounds(0,0,500,500);
+        setBounds(460,130,500,500);
         
           
         txt_disease_id = new TextField();

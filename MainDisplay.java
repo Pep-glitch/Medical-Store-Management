@@ -12,7 +12,7 @@ public class MainDisplay extends Frame
     {
         super("HOME");
         setLayout(null);
-        setBounds(0,0,500,500);
+        setBounds(460,130,500,500);
         
         drugs = new Button("DRUGS");
         reports = new Button("REPORTS");

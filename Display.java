@@ -17,7 +17,7 @@ public class Display extends Frame
     {
         super("Admin Log In");
         setLayout(null);
-        setBounds(0,0,600,500);
+        setBounds(460,130,600,500);
 
         bgColor = new Color(100,200,100);
         setBackground(bgColor);

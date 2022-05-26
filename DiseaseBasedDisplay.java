@@ -12,7 +12,7 @@ public class DiseaseBasedDisplay extends Frame
     {
         super("Disease Categories");
         setLayout(null);
-        setBounds(0,0,600,500);
+        setBounds(460,130,600,500);
         
         btn_infectious = new Button("INFECTIOUS");
         btn_deficiency = new Button("DEFICIENCY");

@@ -12,7 +12,7 @@ public class ReportTypeDisplay extends Frame
     {
         super("REPORT TYPE");
         setLayout(null);
-        setBounds(0,0,500,500);
+        setBounds(460,130,500,500);
         
        
         addWindowListener(new WindowAdapter()

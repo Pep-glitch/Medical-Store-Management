@@ -1,1 +1,1 @@
-[pharmacy.Drugs@2ff4c356]
+benzel,20 june 2023,400#ethanol,20 july 2023,40#panadol,16 april 2026,800#Paracetamol,21 February 2023,700#

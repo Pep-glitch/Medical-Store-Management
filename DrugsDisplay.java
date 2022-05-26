@@ -12,7 +12,7 @@ public class DrugsDisplay extends Frame
     {
         super("Drug Categories");
         setLayout(null);
-        setBounds(0,0,600,500);
+        setBounds(460,130,600,500);
         
         btn_by_age = new Button("AGE GROUPS");
         btn_disease= new Button("DISEASE TYPE");

@@ -14,7 +14,7 @@ public class UnderTwentyDisplay extends Frame
     {
         super("Age 10-20");
         setLayout(null);
-        setBounds(0,0,500,500);
+        setBounds(460,130,500,500);
 
         txt_disease_uttd = new TextField();
         txt_drug_name_uttd = new TextField();

@@ -23,7 +23,7 @@ public class Drugs
     }
     public String objectToString()
     {
-        return this.drug_name+"#"+this.expiry_date+"#"+this.amount;
+        return this.drug_name+","+this.expiry_date+","+this.amount+"#";
     }
     public static void main(String arg[])
      {

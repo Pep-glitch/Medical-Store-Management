@@ -14,7 +14,7 @@ public class AddingDrugDisplay extends Frame
     {
         super("Add Drug");
         setLayout(null);
-        setBounds(0,0,500,500);
+        setBounds(460,130,500,500);
         
         txt_drug_name = new TextField();
         txt_expiry = new TextField();

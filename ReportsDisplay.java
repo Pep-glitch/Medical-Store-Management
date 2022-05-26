@@ -14,7 +14,7 @@ public class ReportsDisplay extends Frame
     {
         super("Reports");
         setLayout(null);
-        setBounds(0,0,600,500);
+        setBounds(460,130,600,500);
 
         txt_email = new TextField();
         btn_send_mail = new Button("GET REPORT");

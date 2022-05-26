@@ -15,7 +15,7 @@ public class DeficiencyDisplay extends Frame
     {
         super("Deficiency Diseases");
         setLayout(null);
-        setBounds(0,0,500,500);
+        setBounds(460,130,500,500);
         
         
         txt_disease_dd = new TextField();

@@ -14,7 +14,7 @@ public class OverFortyDisplay extends Frame
     {
         super("Age Above 40");
         setLayout(null);
-        setBounds(0,0,500,500);
+        setBounds(460,130,500,500);
 
         txt_disease_ofd = new TextField();
         txt_drug_name_ofd = new TextField();

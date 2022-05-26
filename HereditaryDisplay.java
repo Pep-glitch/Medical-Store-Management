@@ -14,7 +14,7 @@ public class HereditaryDisplay extends Frame
     {
         super("Hereditary Diseases");
         setLayout(null);
-        setBounds(0,0,500,500);
+        setBounds(460,130,500,500);
         
         
         txt_disease_hd = new TextField();

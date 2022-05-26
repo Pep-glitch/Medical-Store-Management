@@ -14,7 +14,7 @@ public class UnderFortyDisplay extends Frame
     {
         super("Age 20-40");
         setLayout(null);
-        setBounds(0,0,500,500);
+        setBounds(460,130,500,500);
 
         txt_disease_ufd = new TextField();
         txt_drug_name_ufd = new TextField();

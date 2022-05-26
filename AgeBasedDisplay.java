@@ -12,7 +12,7 @@ public class AgeBasedDisplay extends Frame
     {
         super("Age Groups");
         setLayout(null);
-        setBounds(0,0,600,500);
+        setBounds(460,130,600,500);
         
         btn_zero_ten = new Button("0-10");
         btn_ten_twenty = new Button("10-20");

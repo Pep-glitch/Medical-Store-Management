@@ -14,7 +14,7 @@ public class UnderTenDisplay extends Frame
     {
         super("Age 0 - 10");
         setLayout(null);
-        setBounds(0,0,500,500);
+        setBounds(460,130,500,500);
         
         txt_disease_utd = new TextField();
         txt_drug_name_utd = new TextField();

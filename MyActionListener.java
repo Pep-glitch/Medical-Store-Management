@@ -25,6 +25,7 @@ public class MyActionListener implements ActionListener,ItemListener
     ReportTypeDisplay reportTypeObject;
     DosageDisplay dosageObject;
     AddingDrugDisplay addDrugObject;
+    Drugs drugObject;
     ArrayList <Deficiency> deficiency = new ArrayList<Deficiency>();
     ArrayList <Infectious> infectious = new ArrayList<Infectious>();
     ArrayList <Hereditary> hereditary = new ArrayList<Hereditary>();
@@ -131,6 +132,7 @@ public class MyActionListener implements ActionListener,ItemListener
         ReportTypeDisplay reportTypeObject = new ReportTypeDisplay();
         DosageDisplay dosageObject = new DosageDisplay();
         AddingDrugDisplay addDrugObject = new AddingDrugDisplay();
+        
 
 
         if(e.getActionCommand().equals("Log In"))
@@ -393,12 +395,18 @@ public class MyActionListener implements ActionListener,ItemListener
        }
        if(e.getActionCommand().equals("Add"))
        {
-             
-             drugs.add(new Drugs(this.addDrugObject.txt_drug_name.getText(),this. addDrugObject.txt_expiry.getText(),Integer.parseInt(this. addDrugObject.txt_amount.getText())));
-             System.out.println(drugs);
+             Drugs drugObject = new Drugs(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+             String toFile = drugObject.objectToString();
+            // drugs.add(new Drugs(this.addDrugObject.txt_drug_name.getText(),this. addDrugObject.txt_expiry.getText(),Integer.parseInt(this. addDrugObject.txt_amount.getText())));
+             System.out.println(toFile);
+            // drugs.add(toFile);
+            this.addDrugObject.txt_drug_name.setText("");
+            this.addDrugObject.txt_expiry.setText("");
+            this.addDrugObject.txt_amount.setText("");
+
              try {
-                FileWriter fw = new FileWriter("drug1.txt");
-                fw.write(drugs.toString());
+                FileWriter fw = new FileWriter("drug1.txt",true);
+                fw.write(toFile);
                 fw.close();
              } catch (Exception xc) {
                 JOptionPane.showMessageDialog(null, xc);
