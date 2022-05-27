@@ -35,6 +35,7 @@ public class MyActionListener implements ActionListener,ItemListener
     ArrayList <UnderFortyDrugs> underFortyDrugs = new ArrayList<UnderFortyDrugs>();
     ArrayList <OverFortyDrugs> overFortyDrugs = new ArrayList<OverFortyDrugs>();
     ArrayList <Drugs> drugs = new ArrayList<Drugs>();
+    ArrayList <String> dosage = new ArrayList<String>();
 
     MyActionListener(Display d)
     {
@@ -110,7 +111,21 @@ public class MyActionListener implements ActionListener,ItemListener
     }
      public void itemStateChanged(ItemEvent ie)
     {
-
+        if(ie.getStateChange()==ie.SELECTED)
+        {
+            dosage.add(ie.getItem().toString());
+            try {
+                FileWriter fw = new FileWriter("dosage.txt");
+                fw.write(dosage.toString());
+                fw.close();
+            } catch (Exception e) {
+               JOptionPane.showMessageDialog(null, e, "Exception", JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+        else
+        {
+            dosage.remove(ie.getItem().toString());
+        }
     }
     public void actionPerformed(ActionEvent e)
     {
@@ -263,6 +278,114 @@ public class MyActionListener implements ActionListener,ItemListener
        {
             this.prisciptionsObject.setVisible(false);
             dosageObject.setVisible(true);
+            /*
+            if( e.getActionCommand().equals("show") && dosage.get(0).equals("Head pain"))
+            {
+                this.dosageObject.txt_suspected_illness.setText("headache");
+                this.dosageObject.txt_drug_one.setText("panadol");
+                this.dosageObject.txt_drug_two.setText("buffen");
+                this.dosageObject.txt_drug_three.setText("ethanol");
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "No Illness Found");
+            }
+           */
+       }
+       if( e.getActionCommand().equals("show") )//&& dosage.get(0).equals("Head pain"))
+       {
+           char ch[] = new char[40];
+           try {
+              FileReader fr = new FileReader("dosage.txt");
+              fr.read(ch);
+              fr.close();
+              String dosageTest = new String(ch);
+              System.out.println(dosageTest);
+              if(dosageTest.contains("Head pain") && dosageTest.contains("fever"))
+              {
+                this.dosageObject.txt_suspected_illness.setText("Malaria");
+                this.dosageObject.txt_drug_one.setText("panadol");
+                this.dosageObject.txt_drug_two.setText("buffen");
+                this.dosageObject.txt_drug_three.setText("LA");
+              }
+              else if(dosageTest.contains("vomiting") && dosageTest.contains("Diarrhea") )
+              {
+                this.dosageObject.txt_suspected_illness.setText("Cholera");
+                this.dosageObject.txt_drug_one.setText("Orfloxacin");
+                this.dosageObject.txt_drug_two.setText("TMP-SMX");
+                this.dosageObject.txt_drug_three.setText("ciprofloxacin");
+              }
+              else if(dosageTest.contains("cough") && dosageTest.contains("flu"))
+              {
+                this.dosageObject.txt_suspected_illness.setText("Flu");
+                this.dosageObject.txt_drug_one.setText("baloxavir marboxil");
+                this.dosageObject.txt_drug_two.setText("oseltamivir");
+                this.dosageObject.txt_drug_three.setText("peramivir");   
+              }
+              else if(dosageTest.contains("fever") && dosageTest.contains("cough"))
+              {
+                this.dosageObject.txt_suspected_illness.setText("Fever");
+                this.dosageObject.txt_drug_one.setText("Naprosyn");
+                this.dosageObject.txt_drug_two.setText("Naprelan");
+                this.dosageObject.txt_drug_three.setText("Aflaxen");  
+              }
+              else if(dosageTest.contains("Nausea") && dosageTest.contains("Congestion"))
+              {
+                this.dosageObject.txt_suspected_illness.setText("stomach flu");
+                this.dosageObject.txt_drug_one.setText("Kaopectate");
+                this.dosageObject.txt_drug_two.setText(" Pepto-Bismol");
+                this.dosageObject.txt_drug_three.setText("N/A");  
+              }
+              else if(dosageTest.contains("Spinal") && dosageTest.contains("Muscle"))
+              {
+                this.dosageObject.txt_suspected_illness.setText("Spinal muscular atrophy");
+                this.dosageObject.txt_drug_one.setText("nusinersen");
+                this.dosageObject.txt_drug_two.setText("Zolgensma");
+                this.dosageObject.txt_drug_three.setText("Evrysdi");
+              }
+              else if(dosageTest.contains("fever") && dosageTest.contains("vomiting"))
+              {
+                this.dosageObject.txt_suspected_illness.setText("gastroenteritis");
+                this.dosageObject.txt_drug_one.setText("promethazine");
+                this.dosageObject.txt_drug_two.setText("prochlorperazine ");
+                this.dosageObject.txt_drug_three.setText("droperidol");
+              }
+              else if(dosageTest.contains("Skin rash") && dosageTest.contains("fever"))
+              {
+                this.dosageObject.txt_suspected_illness.setText("mononucleosis");
+                this.dosageObject.txt_drug_one.setText("ganciclovir");
+                this.dosageObject.txt_drug_two.setText("interferon-gamma");
+                this.dosageObject.txt_drug_three.setText("acyclovir");
+              }
+              else if(dosageTest.contains("Tooth ache") && dosageTest.contains("Sore throat"))
+              {
+                this.dosageObject.txt_suspected_illness.setText("common cold");
+                this.dosageObject.txt_drug_one.setText("Afrin");
+                this.dosageObject.txt_drug_two.setText("Sudafed PE");
+                this.dosageObject.txt_drug_three.setText("pseudoephedrine");
+              }
+              else if(dosageTest.contains("Stomach ache") && dosageTest.contains("fever"))
+              {
+                this.dosageObject.txt_suspected_illness.setText("gastroenteritis");
+                this.dosageObject.txt_drug_one.setText("Imodium");
+                this.dosageObject.txt_drug_two.setText("Kaopectate");
+                this.dosageObject.txt_drug_three.setText("Pepto-Bismol");
+              }
+              else if(dosageTest.contains("Neck pain") && dosageTest.contains("Spinal"))
+              {
+                this.dosageObject.txt_suspected_illness.setText("osteoarthritis");
+                this.dosageObject.txt_drug_one.setText("Motrin");
+                this.dosageObject.txt_drug_two.setText("Advil");
+                this.dosageObject.txt_drug_three.setText("naproxen");
+              }
+              else
+              {
+                JOptionPane.showMessageDialog(null, "No Illness Found");   
+              }
+           } catch (Exception excp) {
+            JOptionPane.showMessageDialog(null,excp,"Exception",JOptionPane.INFORMATION_MESSAGE);
+           }
+          
        }
        if(e.getActionCommand().equals("GET REPORT"))
        {

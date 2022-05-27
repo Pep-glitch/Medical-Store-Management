@@ -7,7 +7,7 @@ public class DosageDisplay extends Frame
 {
     TextField txt_suspected_illness,txt_drug_one,txt_drug_two,txt_drug_three;
     Label lbl_suspected_illness,lbl_drug_one, lbl_drug_two,lbl_drug_three;
-    Button btn_cancel,btn_save;
+    Button btn_cancel,btn_save,btn_show;
     Font font_bold;
     MyActionListener ml = new MyActionListener(this);
     DosageDisplay()
@@ -22,6 +22,7 @@ public class DosageDisplay extends Frame
         txt_drug_three = new TextField();
         btn_cancel = new Button("CANCEL");
         btn_save= new Button("SAVE");
+        btn_show = new Button("show");
         lbl_suspected_illness = new Label("Suspected Illness");
         lbl_drug_one = new Label("Drug >>1");
         lbl_drug_two = new Label("Drug >>2");
@@ -40,15 +41,17 @@ public class DosageDisplay extends Frame
         lbl_drug_three.setBounds(100,300,300,20);
         txt_drug_three.setBounds(100,330,300,40);
 
-        btn_cancel.setBounds(100,380,145,40);
-        btn_save.setBounds(255,380,145,40);
+        btn_cancel.setBounds(100,430,145,40);
+        btn_save.setBounds(255,430,145,40);
+        btn_show.setBounds(100,380,300,40);
        
-        txt_suspected_illness.setFont(font_bold);
-        txt_drug_one.setFont(font_bold);
-        txt_drug_two.setFont(font_bold);
-        txt_drug_three.setFont(font_bold);
+      //  txt_suspected_illness.setFont(font_bold);
+      //  txt_drug_one.setFont(font_bold);
+      //  txt_drug_two.setFont(font_bold);
+      //  txt_drug_three.setFont(font_bold);
         btn_cancel.setFont(font_bold);
         btn_save.setFont(font_bold);
+        btn_show.setFont(font_bold);
         lbl_suspected_illness.setFont(font_bold);
         lbl_drug_one.setFont(font_bold);
         lbl_drug_two.setFont(font_bold);
@@ -60,6 +63,7 @@ public class DosageDisplay extends Frame
         add(txt_drug_three);
         add(btn_cancel);
         add(btn_save);
+        add(btn_show);
         add(lbl_suspected_illness);
         add(lbl_drug_one);
         add(lbl_drug_two);
@@ -68,6 +72,7 @@ public class DosageDisplay extends Frame
        
         btn_cancel.addActionListener(ml);
         btn_save.addActionListener(ml);
+        btn_show.addActionListener(ml);
         addWindowListener(new WindowAdapter()
 			{
 				public void windowClosing(WindowEvent we)
