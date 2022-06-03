@@ -1,1 +1,1 @@
-benzel,20 june 2023,400#ethanol,20 july 2023,40#panadol,16 april 2026,800#Paracetamol,21 February 2023,700#Amoxylin,20 may 2025,40#aaaa,12 september 2023,300#
+benzel,20 june 2023,400#ethanol,20 july 2023,40#panadol,16 april 2026,800#Paracetamol,21 February 2023,700#Amoxylin,20 may 2025,40#aaaa,12 september 2023,300#panado,20 may 2028,40#ggfff,29 june 2023,20#panadol,20 may 2024,30#bufen,20 may 2023,30#

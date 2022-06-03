@@ -148,8 +148,6 @@ public class MyActionListener implements ActionListener,ItemListener
         DosageDisplay dosageObject = new DosageDisplay();
         AddingDrugDisplay addDrugObject = new AddingDrugDisplay();
         
-
-
         if(e.getActionCommand().equals("Log In"))
         {
             System.out.println(this.dp.txt_admin_id.getText());
