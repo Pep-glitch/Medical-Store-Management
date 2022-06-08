@@ -526,73 +526,41 @@ public class MyActionListener implements ActionListener,ItemListener
            
        }
        if(e.getActionCommand().equals("Add"))
-       {
-        data_method_object.enter_into_deficiency(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
-             /* 
-           if()
-           {
-
-           }
-           else if()
-           {
-
-           }
-           else if()
-           {
-
-           }
-           else if()
-           {
-
-           }
-           else if()
-           {
-               
-              
-           }
-           else if()
-           {
-
-           }
-           else if()
-           {
-               
-              
-           }
-           else if()
-           {
-
-           }
-           else if()
-           {
-               
-              
-           }
-           else if()
-           {
-
-           }
-           else if()
-           {
-               
-              
-           }*/
-             Drugs drugObject = new Drugs(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
-             String toFile = drugObject.objectToString();
-            // drugs.add(new Drugs(this.addDrugObject.txt_drug_name.getText(),this. addDrugObject.txt_expiry.getText(),Integer.parseInt(this. addDrugObject.txt_amount.getText())));
-             System.out.println(toFile);
-            // drugs.add(toFile);
+       {   
+               String table_selection = this.addDrugObject.txt_category.getText();
+               switch(table_selection)
+               {
+                   case "deficiency":
+                   data_method_object.enter_into_deficiency(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   break;
+                   case "infectious":
+                   data_method_object.enter_into_infectious(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   break;
+                   case "hereditary":
+                   data_method_object.enter_into_hereditary(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   break;
+                   case "physiological":
+                   data_method_object.enter_into_physiological(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   break;
+                   case "underten":
+                   data_method_object.enter_into_under_ten(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   break;
+                   case "undertwenty":
+                   data_method_object.enter_into_under_twenty(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   break;
+                   case "underforty":
+                   data_method_object.enter_into_under_forty(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   break;
+                   case "overforty":
+                   data_method_object.enter_into_over_forty(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   break;
+                   default:
+                   JOptionPane.showMessageDialog(null, "Invalid Category", "Error", JOptionPane.INFORMATION_MESSAGE);
+                   break;
+               }
             this.addDrugObject.txt_drug_name.setText("");
             this.addDrugObject.txt_expiry.setText("");
             this.addDrugObject.txt_amount.setText("");
-
-             try {
-                FileWriter fw = new FileWriter("drug1.txt",true);
-                fw.write(toFile);
-                fw.close();
-             } catch (Exception xc) {
-                JOptionPane.showMessageDialog(null, xc);
-             }
        }
        if(e.getActionCommand().equals("Discard"))
        {
