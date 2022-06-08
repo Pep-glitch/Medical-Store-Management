@@ -6,7 +6,8 @@ import javax.swing.*;
 import java.awt.Color.*;
 public class Display extends Frame
 {
-    TextField txt_admin_id,txt_admin_pass;
+    TextField txt_admin_id;
+    JPasswordField txt_admin_pass;
     Label lbl_admin_id, lbl_admin_pass;
     Button btn_login;
     Font font_bold;
@@ -26,7 +27,7 @@ public class Display extends Frame
         lbl_admin_id = new Label("Admin ID");
         lbl_admin_pass= new Label("Admin Password");
         txt_admin_id = new TextField();
-        txt_admin_pass = new TextField();
+        txt_admin_pass = new  JPasswordField();
         btn_login = new Button("Log In");
         font_bold = new Font("sans-serif",Font.BOLD,16);
 

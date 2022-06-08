@@ -7,6 +7,8 @@ import java.util.*;
 //import pharmacy.DosageDisplay;
 public class MyActionListener implements ActionListener,ItemListener
 {
+    DataBaseMethods data_method_object;
+    Admin ad1;
     Display dp;
     DiseaseBasedDisplay diseaseObject;
     AgeBasedDisplay ageBasedObject;
@@ -109,6 +111,10 @@ public class MyActionListener implements ActionListener,ItemListener
     {
         this.addDrugObject = add;
     }
+    MyActionListener(Admin ad)
+    {
+        this.ad1 = ad;
+    }
      public void itemStateChanged(ItemEvent ie)
     {
         if(ie.getStateChange()==ie.SELECTED)
@@ -127,6 +133,7 @@ public class MyActionListener implements ActionListener,ItemListener
             dosage.remove(ie.getItem().toString());
         }
     }
+    
     public void actionPerformed(ActionEvent e)
     {
         Display dp = new Display();
@@ -147,11 +154,27 @@ public class MyActionListener implements ActionListener,ItemListener
         ReportTypeDisplay reportTypeObject = new ReportTypeDisplay();
         DosageDisplay dosageObject = new DosageDisplay();
         AddingDrugDisplay addDrugObject = new AddingDrugDisplay();
-        
+        DataBaseMethods data_method_object = new DataBaseMethods();  
+        Admin ad1 = new Admin(40, "50");
+        ad1.admin_id = 30;
+        ad1.admin_pass ="40";
+        Integer pass = Integer.parseInt(ad1.admin_pass);
         if(e.getActionCommand().equals("Log In"))
         {
             System.out.println(this.dp.txt_admin_id.getText());
             System.out.println(this.dp.txt_admin_pass.getText());
+            Integer num_id = Integer.parseInt(this.dp.txt_admin_id.getText());
+            Integer num_pass = Integer.parseInt(this.dp.txt_admin_pass.getText());
+            if(ad1.admin_id==num_id && pass==num_pass)
+            {
+                this.dp.setVisible(false);
+                mainDisplayObject.setVisible(true);   
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null,"Incorrect id or password","Error",JOptionPane.INFORMATION_MESSAGE);  
+            }
+            /*
             try {
                 FileWriter fw = new FileWriter("admintest/logid.txt");
                 fw.write(this.dp. txt_admin_id.getText());
@@ -171,7 +194,7 @@ public class MyActionListener implements ActionListener,ItemListener
             } catch (Exception exp) {
                JOptionPane.showMessageDialog(null, exp, "Error",JOptionPane.INFORMATION_MESSAGE);
             }
-           
+           */
         }
        if(e.getActionCommand().equals("DRUGS")) 
        {
@@ -276,21 +299,9 @@ public class MyActionListener implements ActionListener,ItemListener
        {
             this.prisciptionsObject.setVisible(false);
             dosageObject.setVisible(true);
-            /*
-            if( e.getActionCommand().equals("show") && dosage.get(0).equals("Head pain"))
-            {
-                this.dosageObject.txt_suspected_illness.setText("headache");
-                this.dosageObject.txt_drug_one.setText("panadol");
-                this.dosageObject.txt_drug_two.setText("buffen");
-                this.dosageObject.txt_drug_three.setText("ethanol");
-            }
-            else
-            {
-                JOptionPane.showMessageDialog(null, "No Illness Found");
-            }
-           */
+            
        }
-       if( e.getActionCommand().equals("show") )//&& dosage.get(0).equals("Head pain"))
+       if(e.getActionCommand().equals("show") )//&& dosage.get(0).equals("Head pain"))
        {
            char ch[] = new char[40];
            try {
@@ -516,6 +527,56 @@ public class MyActionListener implements ActionListener,ItemListener
        }
        if(e.getActionCommand().equals("Add"))
        {
+        data_method_object.enter_into_deficiency(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+             /* 
+           if()
+           {
+
+           }
+           else if()
+           {
+
+           }
+           else if()
+           {
+
+           }
+           else if()
+           {
+
+           }
+           else if()
+           {
+               
+              
+           }
+           else if()
+           {
+
+           }
+           else if()
+           {
+               
+              
+           }
+           else if()
+           {
+
+           }
+           else if()
+           {
+               
+              
+           }
+           else if()
+           {
+
+           }
+           else if()
+           {
+               
+              
+           }*/
              Drugs drugObject = new Drugs(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
              String toFile = drugObject.objectToString();
             // drugs.add(new Drugs(this.addDrugObject.txt_drug_name.getText(),this. addDrugObject.txt_expiry.getText(),Integer.parseInt(this. addDrugObject.txt_amount.getText())));
@@ -550,6 +611,7 @@ public class MyActionListener implements ActionListener,ItemListener
        {
            
        }
+       
 
     }
     
