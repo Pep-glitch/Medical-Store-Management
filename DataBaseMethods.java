@@ -15,7 +15,6 @@ public class DataBaseMethods
 			"jdbc:mysql://localhost/medical storre management?characterEncoding=utf8","root","");  
             String query ="INSERT INTO `deficiency` (`Name`, `Date`, `Amount`) VALUES (?,?,?)";	 
 			PreparedStatement stmt=con.prepareStatement(query);
-           // stmt.setString(1,"deficiency" );
 			stmt.setString(1,name);
             stmt.setString(2,date );
             stmt.setInt(3,value );	
@@ -40,7 +39,6 @@ public class DataBaseMethods
 			"jdbc:mysql://localhost/medical storre management?characterEncoding=utf8","root","");  
             String query ="INSERT INTO `hereditary` (`Name`, `Date`, `Amount`) VALUES (?,?,?)";	 
 			PreparedStatement stmt=con.prepareStatement(query);
-           // stmt.setString(1,"deficiency" );
 			stmt.setString(1,name);
             stmt.setString(2,date );
             stmt.setInt(3,value );	
@@ -64,7 +62,6 @@ public class DataBaseMethods
 			"jdbc:mysql://localhost/medical storre management?characterEncoding=utf8","root","");  
             String query ="INSERT INTO `infectious` (`Name`, `Date`, `Amount`) VALUES (?,?,?)";	 
 			PreparedStatement stmt=con.prepareStatement(query);
-           // stmt.setString(1,"deficiency" );
 			stmt.setString(1,name);
             stmt.setString(2,date );
             stmt.setInt(3,value );	
@@ -88,7 +85,6 @@ public class DataBaseMethods
 			"jdbc:mysql://localhost/medical storre management?characterEncoding=utf8","root","");  
             String query ="INSERT INTO `physiological` (`Name`, `Date`, `Amount`) VALUES (?,?,?)";	 
 			PreparedStatement stmt=con.prepareStatement(query);
-           // stmt.setString(1,"deficiency" );
 			stmt.setString(1,name);
             stmt.setString(2,date );
             stmt.setInt(3,value );	
@@ -112,7 +108,6 @@ public class DataBaseMethods
 			"jdbc:mysql://localhost/medical storre management?characterEncoding=utf8","root","");  
             String query ="INSERT INTO `underten` (`Name`, `Date`, `Amount`) VALUES (?,?,?)";	 
 			PreparedStatement stmt=con.prepareStatement(query);
-           // stmt.setString(1,"deficiency" );
 			stmt.setString(1,name);
             stmt.setString(2,date );
             stmt.setInt(3,value );	
@@ -136,7 +131,6 @@ public class DataBaseMethods
 			"jdbc:mysql://localhost/medical storre management?characterEncoding=utf8","root","");  
             String query ="INSERT INTO `undertwenty` (`Name`, `Date`, `Amount`) VALUES (?,?,?)";	 
 			PreparedStatement stmt=con.prepareStatement(query);
-           // stmt.setString(1,"deficiency" );
 			stmt.setString(1,name);
             stmt.setString(2,date );
             stmt.setInt(3,value );	
@@ -160,7 +154,6 @@ public class DataBaseMethods
 			"jdbc:mysql://localhost/medical storre management?characterEncoding=utf8","root","");  
             String query ="INSERT INTO `underforty` (`Name`, `Date`, `Amount`) VALUES (?,?,?)";	 
 			PreparedStatement stmt=con.prepareStatement(query);
-           // stmt.setString(1,"deficiency" );
 			stmt.setString(1,name);
             stmt.setString(2,date );
             stmt.setInt(3,value );	
@@ -184,7 +177,6 @@ public class DataBaseMethods
 			"jdbc:mysql://localhost/medical storre management?characterEncoding=utf8","root","");  
             String query ="INSERT INTO `overforty` (`Name`, `Date`, `Amount`) VALUES (?,?,?)";	 
 			PreparedStatement stmt=con.prepareStatement(query);
-           // stmt.setString(1,"deficiency" );
 			stmt.setString(1,name);
             stmt.setString(2,date );
             stmt.setInt(3,value );	

@@ -5,10 +5,12 @@ import java.io.*;
 import javax.swing.*;
 public class AddingDrugDisplay extends Frame 
 {
-    TextField txt_drug_name,txt_expiry,txt_amount,txt_category;
+    TextField txt_drug_name,txt_expiry,txt_amount;//txt_category;
     Label lbl_drug_name,lbl_expiry,lbl_amount,lbl_cat;
     Button btn_add,btn_cancel;
+    JComboBox<String> category;
     Font font_bold;
+    String[] cat = {"underten","undertwenty","underforty","overforty","deficiency","infectious","hereditary","physiological"};
     MyActionListener ml = new MyActionListener(this);
     AddingDrugDisplay()
     {
@@ -19,7 +21,8 @@ public class AddingDrugDisplay extends Frame
         txt_drug_name = new TextField();
         txt_expiry = new TextField();
         txt_amount = new TextField();
-        txt_category = new TextField();
+        //txt_category = new TextField();
+        category = new JComboBox<String>(cat);
         lbl_drug_name = new Label("Drug Name");
         lbl_expiry = new Label("Expiry Date");
         lbl_amount = new Label("Availability");
@@ -38,13 +41,13 @@ public class AddingDrugDisplay extends Frame
         txt_amount.setBounds(100,260,300,40); 
         
         lbl_cat.setBounds(100,310,300,20); 
-        txt_category.setBounds(100,340,300,40); 
+        category.setBounds(100,340,300,40); 
 
         btn_add.setBounds(180,390,150,50);
         btn_cancel.setBounds(180,450,150,50);
 
         txt_drug_name.setFont(font_bold);
-        txt_category.setFont(font_bold);
+        category.setFont(font_bold);
         txt_expiry.setFont(font_bold); 
         txt_amount.setFont(font_bold); 
         lbl_drug_name.setFont(font_bold); 
@@ -55,7 +58,7 @@ public class AddingDrugDisplay extends Frame
         btn_cancel.setFont(font_bold);
         
         add(txt_drug_name);
-        add(txt_category);
+        add(category);
         add(txt_expiry); 
         add(txt_amount); 
         add(lbl_drug_name); 

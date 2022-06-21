@@ -527,32 +527,41 @@ public class MyActionListener implements ActionListener,ItemListener
        }
        if(e.getActionCommand().equals("Add"))
        {   
-               String table_selection = this.addDrugObject.txt_category.getText();
+               String table_selection = this.addDrugObject.category.getSelectedItem().toString();
+               System.out.println(table_selection);
                switch(table_selection)
                {
                    case "deficiency":
                    data_method_object.enter_into_deficiency(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   JOptionPane.showMessageDialog(null, "Successfully Added", "Admin Info", JOptionPane.INFORMATION_MESSAGE);
                    break;
                    case "infectious":
                    data_method_object.enter_into_infectious(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   JOptionPane.showMessageDialog(null, "Successfully Added", "Admin Info", JOptionPane.INFORMATION_MESSAGE);
                    break;
                    case "hereditary":
                    data_method_object.enter_into_hereditary(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   JOptionPane.showMessageDialog(null, "Successfully Added", "Admin Info", JOptionPane.INFORMATION_MESSAGE);
                    break;
                    case "physiological":
                    data_method_object.enter_into_physiological(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   JOptionPane.showMessageDialog(null, "Successfully Added", "Admin Info", JOptionPane.INFORMATION_MESSAGE);
                    break;
                    case "underten":
                    data_method_object.enter_into_under_ten(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   JOptionPane.showMessageDialog(null, "Successfully Added", "Admin Info", JOptionPane.INFORMATION_MESSAGE);
                    break;
                    case "undertwenty":
                    data_method_object.enter_into_under_twenty(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   JOptionPane.showMessageDialog(null, "Successfully Added", "Admin Info", JOptionPane.INFORMATION_MESSAGE);
                    break;
                    case "underforty":
                    data_method_object.enter_into_under_forty(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   JOptionPane.showMessageDialog(null, "Successfully Added", "Admin Info", JOptionPane.INFORMATION_MESSAGE);
                    break;
                    case "overforty":
                    data_method_object.enter_into_over_forty(this.addDrugObject.txt_drug_name.getText(), this. addDrugObject.txt_expiry.getText(), Integer.parseInt(this. addDrugObject.txt_amount.getText()));
+                   JOptionPane.showMessageDialog(null, "Successfully Added", "Admin Info", JOptionPane.INFORMATION_MESSAGE);
                    break;
                    default:
                    JOptionPane.showMessageDialog(null, "Invalid Category", "Error", JOptionPane.INFORMATION_MESSAGE);

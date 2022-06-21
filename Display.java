@@ -13,6 +13,7 @@ public class Display extends Frame
     Font font_bold;
     Color bgColor;
     Icon image;
+    Graphics g ;
     MyActionListener ml = new MyActionListener(this);
     Display()
     {
@@ -22,7 +23,7 @@ public class Display extends Frame
 
         bgColor = new Color(100,200,100);
         setBackground(bgColor);
-       
+        this.paint(g);;
 
         lbl_admin_id = new Label("Admin ID");
         lbl_admin_pass= new Label("Admin Password");
@@ -57,8 +58,17 @@ public class Display extends Frame
 				}
 			});
     }
+    /*
+     public void paint(Graphics g) 
+    {  
+        Toolkit t=Toolkit.getDefaultToolkit();  
+        Image i=t.getImage("C:\Users\Lighton\Documents\Java\Medical Store\images/img.png");  
+        g.drawImage(i, 0, 0,this);  
+    }
+    */
     public static void main(String ss[])
     {
+
         Display dp = new Display();
         dp.setVisible(true);
     }
