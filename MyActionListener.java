@@ -174,27 +174,7 @@ public class MyActionListener implements ActionListener,ItemListener
             {
                 JOptionPane.showMessageDialog(null,"Incorrect id or password","Error",JOptionPane.INFORMATION_MESSAGE);  
             }
-            /*
-            try {
-                FileWriter fw = new FileWriter("admintest/logid.txt");
-                fw.write(this.dp. txt_admin_id.getText());
-                fw.close();
-                FileWriter fw2 = new FileWriter("admintest/logpass.txt");
-                fw2.write(this.dp.txt_admin_pass.getText());
-                fw2.close();
-                if(Admin.validate_user()==true)
-                {
-                    this.dp.setVisible(false);
-                    mainDisplayObject.setVisible(true);  
-                }
-                else
-                {
-                    JOptionPane.showMessageDialog(null,"Incorrect id or password","Error",JOptionPane.INFORMATION_MESSAGE);
-                }
-            } catch (Exception exp) {
-               JOptionPane.showMessageDialog(null, exp, "Error",JOptionPane.INFORMATION_MESSAGE);
-            }
-           */
+   
         }
        if(e.getActionCommand().equals("DRUGS")) 
        {
@@ -398,8 +378,9 @@ public class MyActionListener implements ActionListener,ItemListener
        }
        if(e.getActionCommand().equals("GET REPORT"))
        {
-            this.reportObject.setVisible(false); 
-            reportTypeObject.setVisible(true); 
+          //  this.reportObject.setVisible(false); 
+          //  reportTypeObject.setVisible(true); 
+          JOptionPane.showMessageDialog(null, "SMTP Config Error", "Error", JOptionPane.INFORMATION_MESSAGE);
        }
        if(e.getActionCommand().equals("CANCEL"))
        {
@@ -414,114 +395,127 @@ public class MyActionListener implements ActionListener,ItemListener
          //Write to file as Administered Dosage.  
        }
        //for under ten
-       if(e.getActionCommand().equals("HOME"))
+       if(e.getActionCommand().equals(".Exit"))
        {
            this.underTenObject.setVisible(false);
-           mainDisplayObject.setVisible(true);
+           drugsObject.setVisible(true);
        }
-       if(e.getActionCommand().equals("next"))
+       if(e.getActionCommand().equals(".Get"))
        {
-            this.underTenObject.txt_disease_utd.setText("Lighton");
+        JOptionPane.showMessageDialog(null,"Work in Progress", "Notice", JOptionPane.INFORMATION_MESSAGE); 
        }
-       if(e.getActionCommand().equals("prev"))
+       if(e.getActionCommand().equals(""))
        {
            
        }
        //for under twenty
-       if(e.getActionCommand().equals("HOME PAGE"))
+       if(e.getActionCommand().equals("Exit,"))
        {
             this.underTwentyObject.setVisible(false);
-            mainDisplayObject.setVisible(true);
+            drugsObject.setVisible(true);
        }
-       if(e.getActionCommand().equals("next."))
+       if(e.getActionCommand().equals("Get,"))
        {
-          this.underTwentyObject.txt_disease_uttd.setText("Under Twenty"); 
+        JOptionPane.showMessageDialog(null,"Work in Progress", "Notice", JOptionPane.INFORMATION_MESSAGE);
        }
-       if(e.getActionCommand().equals("prev."))
+       if(e.getActionCommand().equals(""))
        {
            
        }
        //for under forty
-       if(e.getActionCommand().equals("HOME VIEW"))
+       if(e.getActionCommand().equals(".Exit."))
        {
             this.underFortyObject.setVisible(false);
-            mainDisplayObject.setVisible(true);  
+            drugsObject.setVisible(true);  
        }
-       if(e.getActionCommand().equals(".next"))
+       if(e.getActionCommand().equals(".Get."))
        {
-           this.underFortyObject.txt_disease_ufd.setText("Under forty");
+        JOptionPane.showMessageDialog(null,"Work in Progress", "Notice", JOptionPane.INFORMATION_MESSAGE); 
        }
-       if(e.getActionCommand().equals(".prev"))
+       if(e.getActionCommand().equals(""))
        {
            
        }
        //for above forty
-       if(e.getActionCommand().equals("MAIN"))
+       if(e.getActionCommand().equals(",Exit."))
        {
             this.overFortyObject.setVisible(false);
-            mainDisplayObject.setVisible(true); 
+            drugsObject.setVisible(true); 
        }
-       if(e.getActionCommand().equals("next,"))
+       if(e.getActionCommand().equals(",Get."))
        {
-          this.overFortyObject.txt_disease_ofd.setText("above 40"); 
+        JOptionPane.showMessageDialog(null,"Work in Progress", "Notice", JOptionPane.INFORMATION_MESSAGE);
        }  
-       if(e.getActionCommand().equals("prev,"))
+       if(e.getActionCommand().equals(""))
        {
-           
+      
        }
        //for phsiological diseases
-       if(e.getActionCommand().equals("FIRST PAGE"))
+       if(e.getActionCommand().equals("Exit."))
        {
            this.physiologicalObject.setVisible(false);
-           mainDisplayObject.setVisible(true);  
+           drugsObject.setVisible(true);  
        }
-       if(e.getActionCommand().equals("next-"))
+       if(e.getActionCommand().equals("Get."))
        {
-           
+          // System.out.println(data_method_object.get_from_physiological());
+        int m;
+        for(m=0;m<5;m++)
+        {
+        String one_object = data_method_object.get_from_physiological(m);
+        for(int i = 0; i<3;i++)
+        {
+            String obj_arr[] = one_object.split("#");
+            System.out.println(obj_arr[i]);
+            this.physiologicalObject.tab.setValueAt(obj_arr[0],m,0);
+            this.physiologicalObject.tab.setValueAt(obj_arr[1],m,1);
+            this.physiologicalObject.tab.setValueAt(obj_arr[2],m,2);
+        } 
+       } 
        }
-       if(e.getActionCommand().equals("-prev"))
+       if(e.getActionCommand().equals(""))
        {
            
        }
         //for hereditary diseases
-        if(e.getActionCommand().equals("START VIEW"))
+        if(e.getActionCommand().equals("Exit,,"))
         {
             this.hereditaryObject.setVisible(false);
-            mainDisplayObject.setVisible(true);
+            drugsObject.setVisible(true);
         }
-       if(e.getActionCommand().equals(",next"))
+       if(e.getActionCommand().equals("Get,,"))
        {
            
        }
-       if(e.getActionCommand().equals(",prev"))
+       if(e.getActionCommand().equals(""))
        {
            
        }
         //for deficiency diseases
-        if(e.getActionCommand().equals("START PAGE"))
+        if(e.getActionCommand().equals("..Exit"))
         {
             this.deficiencyObject.setVisible(false);
-            mainDisplayObject.setVisible(true);
+            drugsObject.setVisible(true);
         }
-       if(e.getActionCommand().equals("-next"))
+       if(e.getActionCommand().equals("..Get"))
        {
-           
+        JOptionPane.showMessageDialog(null,"Work in Progress", "Notice", JOptionPane.INFORMATION_MESSAGE);  
        }
-       if(e.getActionCommand().equals("prev-"))
+       if(e.getActionCommand().equals(""))
        {
            
        }
         //for infectious diseases
-        if(e.getActionCommand().equals("START"))
+        if(e.getActionCommand().equals("Exit.."))
         {
            this.infectiousObject.setVisible(false);
-           mainDisplayObject.setVisible(true);  
+           drugsObject.setVisible(true);  
         }
-       if(e.getActionCommand().equals(".next."))
+       if(e.getActionCommand().equals("Get.."))
        {
            
        }
-       if(e.getActionCommand().equals(".prev."))
+       if(e.getActionCommand().equals(""))
        {
            
        }
